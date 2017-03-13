@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.workload_deployment_request import WorkloadDeploymentRequest
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.workload_deployment_request import WorkloadDeploymentRequest
 
 
 class TestWorkloadDeploymentRequest(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestWorkloadDeploymentRequest(unittest.TestCase):
         """
         Test WorkloadDeploymentRequest
         """
-        model = swagger_client.models.workload_deployment_request.WorkloadDeploymentRequest()
+        model = pyacp.models.workload_deployment_request.WorkloadDeploymentRequest()
 
 
 if __name__ == '__main__':

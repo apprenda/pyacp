@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.unpaged_resource_base_deployment_policy import UnpagedResourceBaseDeploymentPolicy
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.unpaged_resource_base_deployment_policy import UnpagedResourceBaseDeploymentPolicy
 
 
 class TestUnpagedResourceBaseDeploymentPolicy(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestUnpagedResourceBaseDeploymentPolicy(unittest.TestCase):
         """
         Test UnpagedResourceBaseDeploymentPolicy
         """
-        model = swagger_client.models.unpaged_resource_base_deployment_policy.UnpagedResourceBaseDeploymentPolicy()
+        model = pyacp.models.unpaged_resource_base_deployment_policy.UnpagedResourceBaseDeploymentPolicy()
 
 
 if __name__ == '__main__':

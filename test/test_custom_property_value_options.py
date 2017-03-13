@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.custom_property_value_options import CustomPropertyValueOptions
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.custom_property_value_options import CustomPropertyValueOptions
 
 
 class TestCustomPropertyValueOptions(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestCustomPropertyValueOptions(unittest.TestCase):
         """
         Test CustomPropertyValueOptions
         """
-        model = swagger_client.models.custom_property_value_options.CustomPropertyValueOptions()
+        model = pyacp.models.custom_property_value_options.CustomPropertyValueOptions()
 
 
 if __name__ == '__main__':

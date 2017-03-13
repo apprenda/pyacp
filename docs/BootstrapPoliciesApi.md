@@ -1,4 +1,4 @@
-# swagger_client.BootstrapPoliciesApi
+# pyacp.BootstrapPoliciesApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -23,13 +23,13 @@ Create Bootsrap Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
-bootstrap_policy = swagger_client.ApprendaSOCWebRestAPIResourcesBootstrapPolicy() # ApprendaSOCWebRestAPIResourcesBootstrapPolicy | Required. Bootstrap Policy  to add to the system
+api_instance = pyacp.BootstrapPoliciesApi()
+bootstrap_policy = pyacp.ApprendaSOCWebRestAPIResourcesBootstrapPolicy() # ApprendaSOCWebRestAPIResourcesBootstrapPolicy | Required. Bootstrap Policy  to add to the system
 
 try: 
     # Create Bootsrap Policy
@@ -70,12 +70,12 @@ Get all Bootstrap Policies
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
+api_instance = pyacp.BootstrapPoliciesApi()
 
 try: 
     # Get all Bootstrap Policies
@@ -114,12 +114,12 @@ Get Bootstrap Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
+api_instance = pyacp.BootstrapPoliciesApi()
 bsp_name = 'bsp_name_example' # str | Required. Name of the Bootstrap Policy to retrieve
 
 try: 
@@ -162,12 +162,12 @@ Delete Bootstrap Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
+api_instance = pyacp.BootstrapPoliciesApi()
 bsp_name = 'bsp_name_example' # str | Required. Name of the Bootstrap Policy to delete
 
 try: 
@@ -209,14 +209,14 @@ Update Bootstrap Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
+api_instance = pyacp.BootstrapPoliciesApi()
 bsp_name = 'bsp_name_example' # str | Required. Name of Boostrap Policy
-bootstrap_policy = swagger_client.ApprendaSOCWebRestAPIResourcesBootstrapPolicy() # ApprendaSOCWebRestAPIResourcesBootstrapPolicy | Required. Bootstrap Policy to add to the collection. All fields should be passed in the request
+bootstrap_policy = pyacp.ApprendaSOCWebRestAPIResourcesBootstrapPolicy() # ApprendaSOCWebRestAPIResourcesBootstrapPolicy | Required. Bootstrap Policy to add to the collection. All fields should be passed in the request
 
 try: 
     # Update Bootstrap Policy
@@ -259,12 +259,12 @@ Upload Bootstrap Policy archive
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BootstrapPoliciesApi()
+api_instance = pyacp.BootstrapPoliciesApi()
 bsp_name = 'bsp_name_example' # str | Name of the Bootstrap Policy
 file = '/path/to/file.txt' # file | Archive for the Bootstrap Policy
 

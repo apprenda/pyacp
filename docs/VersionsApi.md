@@ -1,4 +1,4 @@
-# swagger_client.VersionsApi
+# pyacp.VersionsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -19,12 +19,12 @@ Get an application
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = pyacp.VersionsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of the application
 
 try: 
@@ -67,12 +67,12 @@ Get an application version
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VersionsApi()
+api_instance = pyacp.VersionsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of the application
 version_alias = 'version_alias_example' # str | Required. Alias of version
 

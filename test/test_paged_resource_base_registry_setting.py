@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.paged_resource_base_registry_setting import PagedResourceBaseRegistrySetting
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.paged_resource_base_registry_setting import PagedResourceBaseRegistrySetting
 
 
 class TestPagedResourceBaseRegistrySetting(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestPagedResourceBaseRegistrySetting(unittest.TestCase):
         """
         Test PagedResourceBaseRegistrySetting
         """
-        model = swagger_client.models.paged_resource_base_registry_setting.PagedResourceBaseRegistrySetting()
+        model = pyacp.models.paged_resource_base_registry_setting.PagedResourceBaseRegistrySetting()
 
 
 if __name__ == '__main__':

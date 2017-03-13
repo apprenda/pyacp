@@ -1,4 +1,4 @@
-# swagger_client.RegistryApi
+# pyacp.RegistryApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -22,12 +22,12 @@ Delete Registry Setting
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegistryApi()
+api_instance = pyacp.RegistryApi()
 name = 'name_example' # str | Required. Name of setting
 
 try: 
@@ -69,12 +69,12 @@ Get all Registry Settings
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegistryApi()
+api_instance = pyacp.RegistryApi()
 page_size = 56 # int | Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20 (optional)
 page_number = 56 # int | The page of results to return. Defaults to 1, the first page (optional)
 search_term = 'search_term_example' # str | Word to use to search for matching settings (optional)
@@ -121,12 +121,12 @@ Get Registry Setting
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegistryApi()
+api_instance = pyacp.RegistryApi()
 name = 'name_example' # str | Required. Name of the setting
 
 try: 
@@ -169,13 +169,13 @@ Create new Registry Setting
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegistryApi()
-setting = swagger_client.RegistrySetting() # RegistrySetting | Required. Registry Setting to add
+api_instance = pyacp.RegistryApi()
+setting = pyacp.RegistrySetting() # RegistrySetting | Required. Registry Setting to add
 
 try: 
     # Create new Registry Setting
@@ -217,14 +217,14 @@ Update Registry Setting
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegistryApi()
+api_instance = pyacp.RegistryApi()
 name = 'name_example' # str | Required. Name of the setting
-setting = swagger_client.RegistrySetting() # RegistrySetting | Required. Regirty Setting to update
+setting = pyacp.RegistrySetting() # RegistrySetting | Required. Regirty Setting to update
 
 try: 
     # Update Registry Setting

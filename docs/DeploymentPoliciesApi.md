@@ -1,4 +1,4 @@
-# swagger_client.DeploymentPoliciesApi
+# pyacp.DeploymentPoliciesApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -22,12 +22,12 @@ Get all Deployment Policies
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DeploymentPoliciesApi()
+api_instance = pyacp.DeploymentPoliciesApi()
 
 try: 
     # Get all Deployment Policies
@@ -66,12 +66,12 @@ Delete Deployment Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DeploymentPoliciesApi()
+api_instance = pyacp.DeploymentPoliciesApi()
 id = 56 # int | Required. Platform assigned id of Deployment Policy
 
 try: 
@@ -113,12 +113,12 @@ Get Deployment Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DeploymentPoliciesApi()
+api_instance = pyacp.DeploymentPoliciesApi()
 id = 56 # int | Platform assigned id of Deployment Policy
 
 try: 
@@ -161,14 +161,14 @@ Update deployment Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DeploymentPoliciesApi()
+api_instance = pyacp.DeploymentPoliciesApi()
 id = 56 # int | Required. Platform assigned id of Deployment Policy
-deployment_policy = swagger_client.DeploymentPolicy() # DeploymentPolicy | Required. Deployment Policy to update
+deployment_policy = pyacp.DeploymentPolicy() # DeploymentPolicy | Required. Deployment Policy to update
 
 try: 
     # Update deployment Policy
@@ -210,13 +210,13 @@ Create Deployment Policy
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DeploymentPoliciesApi()
-deployment_policy = swagger_client.DeploymentPolicy() # DeploymentPolicy | Required. Deployment Policy to add
+api_instance = pyacp.DeploymentPoliciesApi()
+deployment_policy = pyacp.DeploymentPolicy() # DeploymentPolicy | Required. Deployment Policy to add
 
 try: 
     # Create Deployment Policy

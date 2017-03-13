@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.add_on_creation_request import AddOnCreationRequest
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.add_on_creation_request import AddOnCreationRequest
 
 
 class TestAddOnCreationRequest(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestAddOnCreationRequest(unittest.TestCase):
         """
         Test AddOnCreationRequest
         """
-        model = swagger_client.models.add_on_creation_request.AddOnCreationRequest()
+        model = pyacp.models.add_on_creation_request.AddOnCreationRequest()
 
 
 if __name__ == '__main__':

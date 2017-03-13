@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.bootstrap_policies_api import BootstrapPoliciesApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.bootstrap_policies_api import BootstrapPoliciesApi
 
 
 class TestBootstrapPoliciesApi(unittest.TestCase):
     """ BootstrapPoliciesApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.bootstrap_policies_api.BootstrapPoliciesApi()
+        self.api = pyacp.apis.bootstrap_policies_api.BootstrapPoliciesApi()
 
     def tearDown(self):
         pass

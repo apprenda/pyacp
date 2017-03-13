@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.clouds_api import CloudsApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.clouds_api import CloudsApi
 
 
 class TestCloudsApi(unittest.TestCase):
     """ CloudsApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.clouds_api.CloudsApi()
+        self.api = pyacp.apis.clouds_api.CloudsApi()
 
     def tearDown(self):
         pass

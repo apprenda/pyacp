@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.application import Application
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.application import Application
 
 
 class TestApplication(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestApplication(unittest.TestCase):
         """
         Test Application
         """
-        model = swagger_client.models.application.Application()
+        model = pyacp.models.application.Application()
 
 
 if __name__ == '__main__':

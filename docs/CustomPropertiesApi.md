@@ -1,4 +1,4 @@
-# swagger_client.CustomPropertiesApi
+# pyacp.CustomPropertiesApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -22,13 +22,13 @@ Add a new Custom Property
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomPropertiesApi()
-custom_property = swagger_client.CustomProperty() # CustomProperty | Required. Custom Property to add
+api_instance = pyacp.CustomPropertiesApi()
+custom_property = pyacp.CustomProperty() # CustomProperty | Required. Custom Property to add
 
 try: 
     # Add a new Custom Property
@@ -70,12 +70,12 @@ Get all Custom Properties
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomPropertiesApi()
+api_instance = pyacp.CustomPropertiesApi()
 type = ['type_example'] # list[str] | A comma-separated list of applicability options to filter on. (optional)
 page_size = 56 # int | Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20 (optional)
 page_number = 56 # int | The page of results to return. Defaults to 1, the first page (optional)
@@ -122,12 +122,12 @@ Get Custom Property
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomPropertiesApi()
+api_instance = pyacp.CustomPropertiesApi()
 id = 56 # int | Required. Id of the Custom Property
 
 try: 
@@ -170,12 +170,12 @@ Delete a Custom Property
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomPropertiesApi()
+api_instance = pyacp.CustomPropertiesApi()
 id = 56 # int | 
 
 try: 
@@ -217,14 +217,14 @@ Update a Custom Property
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CustomPropertiesApi()
+api_instance = pyacp.CustomPropertiesApi()
 id = 56 # int | Required. Id of the Custom Property
-custom_property = swagger_client.CustomPropertyUpdate() # CustomPropertyUpdate | Custom Property to update
+custom_property = pyacp.CustomPropertyUpdate() # CustomPropertyUpdate | Custom Property to update
 
 try: 
     # Update a Custom Property

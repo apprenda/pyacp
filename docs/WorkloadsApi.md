@@ -1,4 +1,4 @@
-# swagger_client.WorkloadsApi
+# pyacp.WorkloadsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -21,12 +21,12 @@ Get workload
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.WorkloadsApi()
+api_instance = pyacp.WorkloadsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of application
 version_alias = 'version_alias_example' # str | Required. Alias of application version
 component_alias = 'component_alias_example' # str | Required. Alias of application component
@@ -75,12 +75,12 @@ Get all workloads
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.WorkloadsApi()
+api_instance = pyacp.WorkloadsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of application
 version_alias = 'version_alias_example' # str | Required. Alias of application version
 component_alias = 'component_alias_example' # str | Required. Alias of application component
@@ -127,16 +127,16 @@ Deploy workload
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.WorkloadsApi()
+api_instance = pyacp.WorkloadsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of application
 version_alias = 'version_alias_example' # str | Required. Alias of application version
 component_alias = 'component_alias_example' # str | Required. Alias of application component
-workload = swagger_client.WorkloadDeploymentRequest() # WorkloadDeploymentRequest | Required. Name of the node to deploy the workload to
+workload = pyacp.WorkloadDeploymentRequest() # WorkloadDeploymentRequest | Required. Name of the node to deploy the workload to
 
 try: 
     # Deploy workload
@@ -180,12 +180,12 @@ Delete workload
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.WorkloadsApi()
+api_instance = pyacp.WorkloadsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of application
 version_alias = 'version_alias_example' # str | Required. Alias of application version
 component_alias = 'component_alias_example' # str | Required. Alias of application component

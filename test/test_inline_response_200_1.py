@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.inline_response_200_1 import InlineResponse2001
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.inline_response_200_1 import InlineResponse2001
 
 
 class TestInlineResponse2001(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestInlineResponse2001(unittest.TestCase):
         """
         Test InlineResponse2001
         """
-        model = swagger_client.models.inline_response_200_1.InlineResponse2001()
+        model = pyacp.models.inline_response_200_1.InlineResponse2001()
 
 
 if __name__ == '__main__':

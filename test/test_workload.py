@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.workload import Workload
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.workload import Workload
 
 
 class TestWorkload(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestWorkload(unittest.TestCase):
         """
         Test Workload
         """
-        model = swagger_client.models.workload.Workload()
+        model = pyacp.models.workload.Workload()
 
 
 if __name__ == '__main__':

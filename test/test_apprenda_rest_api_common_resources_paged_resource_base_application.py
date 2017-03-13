@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.apprenda_rest_api_common_resources_paged_resource_base_application import ApprendaRestAPICommonResourcesPagedResourceBaseApplication
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.apprenda_rest_api_common_resources_paged_resource_base_application import ApprendaRestAPICommonResourcesPagedResourceBaseApplication
 
 
 class TestApprendaRestAPICommonResourcesPagedResourceBaseApplication(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestApprendaRestAPICommonResourcesPagedResourceBaseApplication(unittest.Te
         """
         Test ApprendaRestAPICommonResourcesPagedResourceBaseApplication
         """
-        model = swagger_client.models.apprenda_rest_api_common_resources_paged_resource_base_application.ApprendaRestAPICommonResourcesPagedResourceBaseApplication()
+        model = pyacp.models.apprenda_rest_api_common_resources_paged_resource_base_application.ApprendaRestAPICommonResourcesPagedResourceBaseApplication()
 
 
 if __name__ == '__main__':

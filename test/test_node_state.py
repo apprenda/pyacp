@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.node_state import NodeState
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.node_state import NodeState
 
 
 class TestNodeState(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestNodeState(unittest.TestCase):
         """
         Test NodeState
         """
-        model = swagger_client.models.node_state.NodeState()
+        model = pyacp.models.node_state.NodeState()
 
 
 if __name__ == '__main__':

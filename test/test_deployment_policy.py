@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.deployment_policy import DeploymentPolicy
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.deployment_policy import DeploymentPolicy
 
 
 class TestDeploymentPolicy(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestDeploymentPolicy(unittest.TestCase):
         """
         Test DeploymentPolicy
         """
-        model = swagger_client.models.deployment_policy.DeploymentPolicy()
+        model = pyacp.models.deployment_policy.DeploymentPolicy()
 
 
 if __name__ == '__main__':

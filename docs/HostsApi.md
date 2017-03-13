@@ -1,4 +1,4 @@
-# swagger_client.HostsApi
+# pyacp.HostsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -20,12 +20,12 @@ Check server transition
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostsApi()
+api_instance = pyacp.HostsApi()
 host_name = 'host_name_example' # str | Host name of the server
 
 try: 
@@ -68,12 +68,12 @@ Get server state
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostsApi()
+api_instance = pyacp.HostsApi()
 host_name = 'host_name_example' # str | Host name of the server
 
 try: 
@@ -116,14 +116,14 @@ Update server state
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostsApi()
+api_instance = pyacp.HostsApi()
 host_name = 'host_name_example' # str | Host name of the server
-node_state = swagger_client.NodeState() # NodeState | State the server should be transitioned to.
+node_state = pyacp.NodeState() # NodeState | State the server should be transitioned to.
 
 try: 
     # Update server state

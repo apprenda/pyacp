@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.unpaged_resource_base_cloud import UnpagedResourceBaseCloud
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.unpaged_resource_base_cloud import UnpagedResourceBaseCloud
 
 
 class TestUnpagedResourceBaseCloud(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestUnpagedResourceBaseCloud(unittest.TestCase):
         """
         Test UnpagedResourceBaseCloud
         """
-        model = swagger_client.models.unpaged_resource_base_cloud.UnpagedResourceBaseCloud()
+        model = pyacp.models.unpaged_resource_base_cloud.UnpagedResourceBaseCloud()
 
 
 if __name__ == '__main__':

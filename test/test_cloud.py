@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.cloud import Cloud
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.cloud import Cloud
 
 
 class TestCloud(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestCloud(unittest.TestCase):
         """
         Test Cloud
         """
-        model = swagger_client.models.cloud.Cloud()
+        model = pyacp.models.cloud.Cloud()
 
 
 if __name__ == '__main__':

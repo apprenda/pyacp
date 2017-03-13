@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.component import Component
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.component import Component
 
 
 class TestComponent(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestComponent(unittest.TestCase):
         """
         Test Component
         """
-        model = swagger_client.models.component.Component()
+        model = pyacp.models.component.Component()
 
 
 if __name__ == '__main__':

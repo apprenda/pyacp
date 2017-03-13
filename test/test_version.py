@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.version import Version
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.version import Version
 
 
 class TestVersion(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVersion(unittest.TestCase):
         """
         Test Version
         """
-        model = swagger_client.models.version.Version()
+        model = pyacp.models.version.Version()
 
 
 if __name__ == '__main__':
