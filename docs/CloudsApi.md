@@ -1,4 +1,4 @@
-# swagger_client.CloudsApi
+# pyacp.CloudsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -19,12 +19,12 @@ Get cloud
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CloudsApi()
+api_instance = pyacp.CloudsApi()
 id = 56 # int | 
 
 try: 
@@ -67,12 +67,12 @@ Get clouds
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CloudsApi()
+api_instance = pyacp.CloudsApi()
 
 try: 
     # Get clouds

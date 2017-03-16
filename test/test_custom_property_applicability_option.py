@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.custom_property_applicability_option import CustomPropertyApplicabilityOption
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.custom_property_applicability_option import CustomPropertyApplicabilityOption
 
 
 class TestCustomPropertyApplicabilityOption(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestCustomPropertyApplicabilityOption(unittest.TestCase):
         """
         Test CustomPropertyApplicabilityOption
         """
-        model = swagger_client.models.custom_property_applicability_option.CustomPropertyApplicabilityOption()
+        model = pyacp.models.custom_property_applicability_option.CustomPropertyApplicabilityOption()
 
 
 if __name__ == '__main__':

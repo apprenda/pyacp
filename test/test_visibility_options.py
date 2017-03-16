@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.visibility_options import VisibilityOptions
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.visibility_options import VisibilityOptions
 
 
 class TestVisibilityOptions(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVisibilityOptions(unittest.TestCase):
         """
         Test VisibilityOptions
         """
-        model = swagger_client.models.visibility_options.VisibilityOptions()
+        model = pyacp.models.visibility_options.VisibilityOptions()
 
 
 if __name__ == '__main__':

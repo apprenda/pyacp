@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.custom_property_update import CustomPropertyUpdate
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.custom_property_update import CustomPropertyUpdate
 
 
 class TestCustomPropertyUpdate(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestCustomPropertyUpdate(unittest.TestCase):
         """
         Test CustomPropertyUpdate
         """
-        model = swagger_client.models.custom_property_update.CustomPropertyUpdate()
+        model = pyacp.models.custom_property_update.CustomPropertyUpdate()
 
 
 if __name__ == '__main__':

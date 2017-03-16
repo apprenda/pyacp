@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.registry_api import RegistryApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.registry_api import RegistryApi
 
 
 class TestRegistryApi(unittest.TestCase):
     """ RegistryApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.registry_api.RegistryApi()
+        self.api = pyacp.apis.registry_api.RegistryApi()
 
     def tearDown(self):
         pass

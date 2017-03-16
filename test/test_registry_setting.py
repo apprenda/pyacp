@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.registry_setting import RegistrySetting
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.registry_setting import RegistrySetting
 
 
 class TestRegistrySetting(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestRegistrySetting(unittest.TestCase):
         """
         Test RegistrySetting
         """
-        model = swagger_client.models.registry_setting.RegistrySetting()
+        model = pyacp.models.registry_setting.RegistrySetting()
 
 
 if __name__ == '__main__':

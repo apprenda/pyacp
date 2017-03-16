@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.versions_api import VersionsApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.versions_api import VersionsApi
 
 
 class TestVersionsApi(unittest.TestCase):
     """ VersionsApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.versions_api.VersionsApi()
+        self.api = pyacp.apis.versions_api.VersionsApi()
 
     def tearDown(self):
         pass

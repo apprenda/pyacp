@@ -1,4 +1,4 @@
-# swagger_client.AddOnsApi
+# pyacp.AddOnsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -22,13 +22,13 @@ Create Add-On
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AddOnsApi()
-addon = swagger_client.AddOnCreationRequest() # AddOnCreationRequest | Required. Add-On to add to the collection
+api_instance = pyacp.AddOnsApi()
+addon = pyacp.AddOnCreationRequest() # AddOnCreationRequest | Required. Add-On to add to the collection
 
 try: 
     # Create Add-On
@@ -70,12 +70,12 @@ Get all Add-Ons
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AddOnsApi()
+api_instance = pyacp.AddOnsApi()
 
 try: 
     # Get all Add-Ons
@@ -114,12 +114,12 @@ Get Add-On
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AddOnsApi()
+api_instance = pyacp.AddOnsApi()
 addon_alias = 'addon_alias_example' # str | Required. Alias of the Add-On to retrieve
 
 try: 
@@ -162,12 +162,12 @@ Delete Add-On
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AddOnsApi()
+api_instance = pyacp.AddOnsApi()
 addon_alias = 'addon_alias_example' # str | Required. Alias of the Add-On to delete
 
 try: 
@@ -209,12 +209,12 @@ Upload Add-On archive
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AddOnsApi()
+api_instance = pyacp.AddOnsApi()
 addon_alias = 'addon_alias_example' # str | Required. Alias of the Add-On to update
 file = '/path/to/file.txt' # file | Archive for the Add-on
 

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.unpaged_resource_base_bootstrap_policy import UnpagedResourceBaseBootstrapPolicy
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.unpaged_resource_base_bootstrap_policy import UnpagedResourceBaseBootstrapPolicy
 
 
 class TestUnpagedResourceBaseBootstrapPolicy(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestUnpagedResourceBaseBootstrapPolicy(unittest.TestCase):
         """
         Test UnpagedResourceBaseBootstrapPolicy
         """
-        model = swagger_client.models.unpaged_resource_base_bootstrap_policy.UnpagedResourceBaseBootstrapPolicy()
+        model = pyacp.models.unpaged_resource_base_bootstrap_policy.UnpagedResourceBaseBootstrapPolicy()
 
 
 if __name__ == '__main__':

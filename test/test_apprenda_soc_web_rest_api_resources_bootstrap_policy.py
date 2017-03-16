@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.apprenda_soc_web_rest_api_resources_bootstrap_policy import ApprendaSOCWebRestAPIResourcesBootstrapPolicy
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.apprenda_soc_web_rest_api_resources_bootstrap_policy import ApprendaSOCWebRestAPIResourcesBootstrapPolicy
 
 
 class TestApprendaSOCWebRestAPIResourcesBootstrapPolicy(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestApprendaSOCWebRestAPIResourcesBootstrapPolicy(unittest.TestCase):
         """
         Test ApprendaSOCWebRestAPIResourcesBootstrapPolicy
         """
-        model = swagger_client.models.apprenda_soc_web_rest_api_resources_bootstrap_policy.ApprendaSOCWebRestAPIResourcesBootstrapPolicy()
+        model = pyacp.models.apprenda_soc_web_rest_api_resources_bootstrap_policy.ApprendaSOCWebRestAPIResourcesBootstrapPolicy()
 
 
 if __name__ == '__main__':

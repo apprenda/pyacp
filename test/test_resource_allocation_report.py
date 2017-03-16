@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.resource_allocation_report import ResourceAllocationReport
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.resource_allocation_report import ResourceAllocationReport
 
 
 class TestResourceAllocationReport(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestResourceAllocationReport(unittest.TestCase):
         """
         Test ResourceAllocationReport
         """
-        model = swagger_client.models.resource_allocation_report.ResourceAllocationReport()
+        model = pyacp.models.resource_allocation_report.ResourceAllocationReport()
 
 
 if __name__ == '__main__':

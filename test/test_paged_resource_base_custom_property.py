@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.paged_resource_base_custom_property import PagedResourceBaseCustomProperty
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.paged_resource_base_custom_property import PagedResourceBaseCustomProperty
 
 
 class TestPagedResourceBaseCustomProperty(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestPagedResourceBaseCustomProperty(unittest.TestCase):
         """
         Test PagedResourceBaseCustomProperty
         """
-        model = swagger_client.models.paged_resource_base_custom_property.PagedResourceBaseCustomProperty()
+        model = pyacp.models.paged_resource_base_custom_property.PagedResourceBaseCustomProperty()
 
 
 if __name__ == '__main__':

@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.add_ons_api import AddOnsApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.add_ons_api import AddOnsApi
 
 
 class TestAddOnsApi(unittest.TestCase):
     """ AddOnsApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.add_ons_api.AddOnsApi()
+        self.api = pyacp.apis.add_ons_api.AddOnsApi()
 
     def tearDown(self):
         pass

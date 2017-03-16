@@ -1,4 +1,4 @@
-# swagger_client.ApplicationsApi
+# pyacp.ApplicationsApi
 
 All URIs are relative to *http://apps.apprenda.myhost/soc*
 
@@ -21,12 +21,12 @@ Get an application
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ApplicationsApi()
+api_instance = pyacp.ApplicationsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of the application
 
 try: 
@@ -69,12 +69,12 @@ Get an application version
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ApplicationsApi()
+api_instance = pyacp.ApplicationsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of the application
 version_alias = 'version_alias_example' # str | Required. Alias of version
 
@@ -119,12 +119,12 @@ Get all applications
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ApplicationsApi()
+api_instance = pyacp.ApplicationsApi()
 filter = 'filter_example' # str | Word to search for matching applications (optional)
 page_number = 56 # int | The page of results to return. Defaults to 1, the first page (optional)
 page_size = 56 # int | Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20 (optional)
@@ -179,12 +179,12 @@ Get application
 ```python
 from __future__ import print_statement
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import pyacp
+from pyacp.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ApplicationsApi()
+api_instance = pyacp.ApplicationsApi()
 app_alias = 'app_alias_example' # str | Required. Alias of the application
 
 try: 

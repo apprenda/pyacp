@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.models.apprenda_file_system_file_system_uri import ApprendaFileSystemFileSystemUri
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.models.apprenda_file_system_file_system_uri import ApprendaFileSystemFileSystemUri
 
 
 class TestApprendaFileSystemFileSystemUri(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestApprendaFileSystemFileSystemUri(unittest.TestCase):
         """
         Test ApprendaFileSystemFileSystemUri
         """
-        model = swagger_client.models.apprenda_file_system_file_system_uri.ApprendaFileSystemFileSystemUri()
+        model = pyacp.models.apprenda_file_system_file_system_uri.ApprendaFileSystemFileSystemUri()
 
 
 if __name__ == '__main__':

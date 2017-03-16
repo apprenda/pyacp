@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.custom_properties_api import CustomPropertiesApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.custom_properties_api import CustomPropertiesApi
 
 
 class TestCustomPropertiesApi(unittest.TestCase):
     """ CustomPropertiesApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.custom_properties_api.CustomPropertiesApi()
+        self.api = pyacp.apis.custom_properties_api.CustomPropertiesApi()
 
     def tearDown(self):
         pass

@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.deployment_policies_api import DeploymentPoliciesApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.deployment_policies_api import DeploymentPoliciesApi
 
 
 class TestDeploymentPoliciesApi(unittest.TestCase):
     """ DeploymentPoliciesApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.deployment_policies_api.DeploymentPoliciesApi()
+        self.api = pyacp.apis.deployment_policies_api.DeploymentPoliciesApi()
 
     def tearDown(self):
         pass

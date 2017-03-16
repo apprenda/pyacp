@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import swagger_client
-from swagger_client.rest import ApiException
-from swagger_client.apis.workloads_api import WorkloadsApi
+import pyacp
+from pyacp.rest import ApiException
+from pyacp.apis.workloads_api import WorkloadsApi
 
 
 class TestWorkloadsApi(unittest.TestCase):
     """ WorkloadsApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.workloads_api.WorkloadsApi()
+        self.api = pyacp.apis.workloads_api.WorkloadsApi()
 
     def tearDown(self):
         pass
