@@ -20,6 +20,7 @@ import unittest
 import pyacp
 from pyacp.rest import ApiException
 from pyacp.apis.applications_api import ApplicationsApi
+from pyacp.apprenda_ops_client import ApprendaOpsClient
 
 
 class TestApplicationsApi(unittest.TestCase):
@@ -37,7 +38,16 @@ class TestApplicationsApi(unittest.TestCase):
 
         Get an application
         """
-        pass
+
+        try:
+            self.client = ApprendaOpsClient('', '', '')
+        except ConnectionError as error:
+            print(error)
+        except Exception as ex:
+            print(ex)
+        response = self.client.getApplications('developer')
+
+
 
     def test_api_v1_applications_app_alias_versions_version_alias_get(self):
         """
@@ -61,7 +71,14 @@ class TestApplicationsApi(unittest.TestCase):
 
         Get application
         """
-        pass
+        try:
+            self.client = ApprendaOpsClient('', '', '')
+        except ConnectionError as error:
+            print(error)
+        except Exception as ex:
+            print(ex)
+        response = self.client.getApplications()
+        print (response)
 
 
 if __name__ == '__main__':
