@@ -2,6 +2,8 @@ import requests
 import json
 import pyacp.api_client
 from pyacp.apis.applications_api import ApplicationsApi
+from pyacp.apis.custom_properties_api import CustomPropertiesApi
+from pyacp.apis.hosts_api import HostsApi
 
 class ApprendaOpsClient():
 
@@ -31,6 +33,17 @@ class ApprendaOpsClient():
             return api.apps_search_new()
         else:
             return api.api_v1_applications_app_alias_versions_get(alias)
+
+    def getCustomProperties(self, id = None):
+        api = CustomPropertiesApi(self.internalClient)
+        if(id is None):
+            return api.custom_properties_get_public()
+        else:
+            return api.custom_properties_get_single_public(id)
+
+    def getNodes(self, name = None):
+        api = HostsApi(self.internalClient)
+        return api.api_v1_hosts_host_name_state_get(name)
 
 
 
