@@ -18,6 +18,7 @@ import sys
 import unittest
 
 import pyacp
+from pyacp.apprenda_ops_client import ApprendaOpsClient
 from pyacp.rest import ApiException
 from pyacp.apis.custom_properties_api import CustomPropertiesApi
 
@@ -45,7 +46,14 @@ class TestCustomPropertiesApi(unittest.TestCase):
 
         Get all Custom Properties
         """
-        pass
+        try:
+            self.client = ApprendaOpsClient('https://apps.bm.apprenda.com', 'bherdan@apprenda.com', 'Wy9Y6tPMy')
+        except ConnectionError as error:
+            print(error)
+        except Exception as ex:
+            print(ex)
+        response = self.client.getCustomProperties()
+        print (response)
 
     def test_custom_properties_get_single_public(self):
         """
