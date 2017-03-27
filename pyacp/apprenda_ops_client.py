@@ -36,15 +36,29 @@ class ApprendaOpsClient():
         if(alias is None):
             return api.apps_search_new(**kwargs).items
         else:
-            return api.api_v1_applications_app_alias_versions_get(alias).items
+            response = api.api_v1_applications_app_alias_versions_get(alias).items
+            if response.status_code == 404:
+                raise KeyError('The application does not exist')
+            elif response.status_code == 400:
+                raise Exception('There was an error retrieving your application')
+            else:
+                return response
 
-    def getCustomProperties(self, id = None):
+    def getCustomProperties(self, name = None):
         kwargs = {'page_size': 1000}
         api = CustomPropertiesApi(self.internalClient)
-        if(id is None):
+        if(name is None):
             return api.custom_properties_get_public(**kwargs).items
         else:
-            return api.custom_properties_get_single_public(id)
+            response = api.custom_properties_get_public(**kwargs).items
+            id = None
+            for property in response:
+                if property.name == name:
+                    id = property.id
+            if id is None:
+                raise KeyError('The custom property does not exist')
+            else:
+                return api.custom_properties_get_single_public(id)
 
     def transitionNode(self, node, newstate):
         if(node is None or newstate is None):
@@ -54,7 +68,7 @@ class ApprendaOpsClient():
         if (response.status_code==204):
             return True
         elif (response.status_code==404):
-            raise Exception('The node provided was not found. Please ensure that the information passed is correct and try again.')
+            raise KeyError('The node provided was not found. Please ensure that the information passed is correct and try again.')
         else:
             raise Exception('Unknown error when setting the node state for: '+ node)
 
