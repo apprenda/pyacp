@@ -3,7 +3,7 @@
 """
     Platform Operations Rest API
 
-    The Platform Operations REST API can be leveraged to customize the Platform Operator experience of managing infrastructure and applications for the Apprenda Platform. This allows some of the functionality of the Platform's System Operations Center (SOC) to be accomplished through a variety of means such as custom-built UX or command-line interfaces.   For more information about the abilities of Platform Operators, see our documentation on the [SOC](/current/SOC).   ##Authentication   Before making a request, you must be authenticated. Learn how to [get authenticated](/restapi/platformops/v1/authentication).   ##Making a Request   ###Prerequisites   * Installed Platform of version 6.5.1 or later (Note that most endpoints are only available in verison 6.7.0 and later)    * Authentication token   * If SOC authorization is enabled on your Platform, you must be assigned as an active Platform Operator   ###Request URL   All requests must use **https**.   The URL for every request you make is the Cloud URI of your Platform followed by \"/soc\" and the path structure of the endpoint. For example, if your Cloud URI is apps.apprenda.harp and you want to get the Add-ons for your Platform, the request URI will be **apps.apprenda.harp/soc/api/v1/addons**.   For more information, see our documentation on [using API resources](/restapi/platformops/v1/using-resources) and [finding your Cloud URI](/current/clouduri).   ###Request Headers   Your authenication token must be passed in the header of all requests using the key **ApprendaSessionToken** (not case sensitive).  
+    The Platform Operations REST API can be leveraged to customize the Platform Operator experience of managing infrastructure and applications for the Apprenda Platform. This allows some of the functionality of the Platform's System Operations Center (SOC) to be accomplished through a variety of means such as custom-built UX or command-line interfaces.   For more information about the abilities of Platform Operators, see our documentation on the [SOC](/current/SOC).   ##Authentication   Before making a request, you must be authenticated. Learn how to [get authenticated](/restapi/platformops/v1/authentication).   ##Making a Request   ###Prerequisites   * Installed Platform of version 6.5.1 or later (Note that most endpoints are only available in version 6.7.0 and later)    * Authentication token   * If SOC authorization is enabled on your Platform, you must be assigned as an active Platform Operator   ###Request URL   All requests must use **https**.   The URL for every request you make is the Cloud URI of your Platform followed by \"/soc\" and the path structure of the endpoint. For example, if your Cloud URI is apps.apprenda.harp and you want to get the Add-ons for your Platform, the request URI will be **apps.apprenda.harp/soc/api/v1/addons**.   For more information, see our documentation on [using API resources](/restapi/platformops/v1/using-resources) and [finding your Cloud URI](/current/clouduri).   ###Request Headers   Your authenication token must be passed in the header of all requests using the key **ApprendaSessionToken** (not case sensitive).  
 
     OpenAPI spec version: v1
     
@@ -248,7 +248,7 @@ class ApplicationsApi(object):
     def apps_search_new(self, **kwargs):
         """
         Get all applications
-        **Requires Platform version 6.7.0 or later.**   Returns all applications on the Plaform. 
+        **Requires Platform version 6.7.0 or later.**   Returns all applications on the Plaform. By default Apprenda applications are not included. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -264,7 +264,7 @@ class ApplicationsApi(object):
         :param int page_size: Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20
         :param str sort_order: Determines how results will be sorted. Allowed values: ascending, descending. Default: ascending
         :param str sort_by: Field name to use to sort results. Allowed values: ApplicationAlias
-        :param bool include_apprenda_apps: Determines if Apprenda applications are returned in request. Default: True
+        :param bool include_apprenda_apps: Determines if Apprenda applications are returned in request. Default: false
         :param bool only_search_app_info: When true, limits request with a filter word provided to searching only the application name or application alias. When false, all application information and custom properties are searched. Default: True
         :return: ApprendaRestAPICommonResourcesPagedResourceBaseApplication
                  If the method is called asynchronously,
@@ -280,7 +280,7 @@ class ApplicationsApi(object):
     def apps_search_new_with_http_info(self, **kwargs):
         """
         Get all applications
-        **Requires Platform version 6.7.0 or later.**   Returns all applications on the Plaform. 
+        **Requires Platform version 6.7.0 or later.**   Returns all applications on the Plaform. By default Apprenda applications are not included. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -296,7 +296,7 @@ class ApplicationsApi(object):
         :param int page_size: Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20
         :param str sort_order: Determines how results will be sorted. Allowed values: ascending, descending. Default: ascending
         :param str sort_by: Field name to use to sort results. Allowed values: ApplicationAlias
-        :param bool include_apprenda_apps: Determines if Apprenda applications are returned in request. Default: True
+        :param bool include_apprenda_apps: Determines if Apprenda applications are returned in request. Default: false
         :param bool only_search_app_info: When true, limits request with a filter word provided to searching only the application name or application alias. When false, all application information and custom properties are searched. Default: True
         :return: ApprendaRestAPICommonResourcesPagedResourceBaseApplication
                  If the method is called asynchronously,

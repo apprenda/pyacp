@@ -3,7 +3,7 @@
 """
     Platform Operations Rest API
 
-    The Platform Operations REST API can be leveraged to customize the Platform Operator experience of managing infrastructure and applications for the Apprenda Platform. This allows some of the functionality of the Platform's System Operations Center (SOC) to be accomplished through a variety of means such as custom-built UX or command-line interfaces.   For more information about the abilities of Platform Operators, see our documentation on the [SOC](/current/SOC).   ##Authentication   Before making a request, you must be authenticated. Learn how to [get authenticated](/restapi/platformops/v1/authentication).   ##Making a Request   ###Prerequisites   * Installed Platform of version 6.5.1 or later (Note that most endpoints are only available in verison 6.7.0 and later)    * Authentication token   * If SOC authorization is enabled on your Platform, you must be assigned as an active Platform Operator   ###Request URL   All requests must use **https**.   The URL for every request you make is the Cloud URI of your Platform followed by \"/soc\" and the path structure of the endpoint. For example, if your Cloud URI is apps.apprenda.harp and you want to get the Add-ons for your Platform, the request URI will be **apps.apprenda.harp/soc/api/v1/addons**.   For more information, see our documentation on [using API resources](/restapi/platformops/v1/using-resources) and [finding your Cloud URI](/current/clouduri).   ###Request Headers   Your authenication token must be passed in the header of all requests using the key **ApprendaSessionToken** (not case sensitive).  
+    The Platform Operations REST API can be leveraged to customize the Platform Operator experience of managing infrastructure and applications for the Apprenda Platform. This allows some of the functionality of the Platform's System Operations Center (SOC) to be accomplished through a variety of means such as custom-built UX or command-line interfaces.   For more information about the abilities of Platform Operators, see our documentation on the [SOC](/current/SOC).   ##Authentication   Before making a request, you must be authenticated. Learn how to [get authenticated](/restapi/platformops/v1/authentication).   ##Making a Request   ###Prerequisites   * Installed Platform of version 6.5.1 or later (Note that most endpoints are only available in version 6.7.0 and later)    * Authentication token   * If SOC authorization is enabled on your Platform, you must be assigned as an active Platform Operator   ###Request URL   All requests must use **https**.   The URL for every request you make is the Cloud URI of your Platform followed by \"/soc\" and the path structure of the endpoint. For example, if your Cloud URI is apps.apprenda.harp and you want to get the Add-ons for your Platform, the request URI will be **apps.apprenda.harp/soc/api/v1/addons**.   For more information, see our documentation on [using API resources](/restapi/platformops/v1/using-resources) and [finding your Cloud URI](/current/clouduri).   ###Request Headers   Your authenication token must be passed in the header of all requests using the key **ApprendaSessionToken** (not case sensitive).  
 
     OpenAPI spec version: v1
     
@@ -55,7 +55,7 @@ class BootstrapPoliciesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param ApprendaSOCWebRestAPIResourcesBootstrapPolicy bootstrap_policy: Required. Bootstrap Policy  to add to the system (required)
-        :return: None
+        :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -81,7 +81,7 @@ class BootstrapPoliciesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param ApprendaSOCWebRestAPIResourcesBootstrapPolicy bootstrap_policy: Required. Bootstrap Policy  to add to the system (required)
-        :return: None
+        :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -135,7 +135,7 @@ class BootstrapPoliciesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='ApprendaSOCWebRestAPIResourcesBootstrapPolicy',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -238,7 +238,7 @@ class BootstrapPoliciesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def bootstrap_policies_get_single_by_name(self, bsp_name, **kwargs):
+    def bootstrap_policies_get_single_by_name(self, id, **kwargs):
         """
         Get Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Returns a Bootstrap Policy. 
@@ -248,23 +248,23 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.bootstrap_policies_get_single_by_name(bsp_name, callback=callback_function)
+        >>> thread = api.bootstrap_policies_get_single_by_name(id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of the Bootstrap Policy to retrieve (required)
+        :param str id: Required. Id of the Bootstrap Policy to retrieve (required)
         :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.bootstrap_policies_get_single_by_name_with_http_info(bsp_name, **kwargs)
+            return self.bootstrap_policies_get_single_by_name_with_http_info(id, **kwargs)
         else:
-            (data) = self.bootstrap_policies_get_single_by_name_with_http_info(bsp_name, **kwargs)
+            (data) = self.bootstrap_policies_get_single_by_name_with_http_info(id, **kwargs)
             return data
 
-    def bootstrap_policies_get_single_by_name_with_http_info(self, bsp_name, **kwargs):
+    def bootstrap_policies_get_single_by_name_with_http_info(self, id, **kwargs):
         """
         Get Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Returns a Bootstrap Policy. 
@@ -274,17 +274,17 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.bootstrap_policies_get_single_by_name_with_http_info(bsp_name, callback=callback_function)
+        >>> thread = api.bootstrap_policies_get_single_by_name_with_http_info(id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of the Bootstrap Policy to retrieve (required)
+        :param str id: Required. Id of the Bootstrap Policy to retrieve (required)
         :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['bsp_name']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -299,17 +299,17 @@ class BootstrapPoliciesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'bsp_name' is set
-        if ('bsp_name' not in params) or (params['bsp_name'] is None):
-            raise ValueError("Missing the required parameter `bsp_name` when calling `bootstrap_policies_get_single_by_name`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `bootstrap_policies_get_single_by_name`")
 
 
         collection_formats = {}
 
-        resource_path = '/api/v1/bootstrappolicies/{bspName}'.replace('{format}', 'json')
+        resource_path = '/api/v1/bootstrappolicies/{id}'.replace('{format}', 'json')
         path_params = {}
-        if 'bsp_name' in params:
-            path_params['bspName'] = params['bsp_name']
+        if 'id' in params:
+            path_params['id'] = params['id']
 
         query_params = {}
 
@@ -341,7 +341,7 @@ class BootstrapPoliciesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def remove_bootstrap_policy(self, bsp_name, **kwargs):
+    def remove_bootstrap_policy(self, id, **kwargs):
         """
         Delete Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Deletes a Bootstrap Policy from the Platform.  
@@ -351,23 +351,23 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.remove_bootstrap_policy(bsp_name, callback=callback_function)
+        >>> thread = api.remove_bootstrap_policy(id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of the Bootstrap Policy to delete (required)
+        :param str id: Required. Id of the Bootstrap Policy to delete (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.remove_bootstrap_policy_with_http_info(bsp_name, **kwargs)
+            return self.remove_bootstrap_policy_with_http_info(id, **kwargs)
         else:
-            (data) = self.remove_bootstrap_policy_with_http_info(bsp_name, **kwargs)
+            (data) = self.remove_bootstrap_policy_with_http_info(id, **kwargs)
             return data
 
-    def remove_bootstrap_policy_with_http_info(self, bsp_name, **kwargs):
+    def remove_bootstrap_policy_with_http_info(self, id, **kwargs):
         """
         Delete Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Deletes a Bootstrap Policy from the Platform.  
@@ -377,17 +377,17 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.remove_bootstrap_policy_with_http_info(bsp_name, callback=callback_function)
+        >>> thread = api.remove_bootstrap_policy_with_http_info(id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of the Bootstrap Policy to delete (required)
+        :param str id: Required. Id of the Bootstrap Policy to delete (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['bsp_name']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -402,17 +402,17 @@ class BootstrapPoliciesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'bsp_name' is set
-        if ('bsp_name' not in params) or (params['bsp_name'] is None):
-            raise ValueError("Missing the required parameter `bsp_name` when calling `remove_bootstrap_policy`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `remove_bootstrap_policy`")
 
 
         collection_formats = {}
 
-        resource_path = '/api/v1/bootstrappolicies/{bspName}'.replace('{format}', 'json')
+        resource_path = '/api/v1/bootstrappolicies/{id}'.replace('{format}', 'json')
         path_params = {}
-        if 'bsp_name' in params:
-            path_params['bspName'] = params['bsp_name']
+        if 'id' in params:
+            path_params['id'] = params['id']
 
         query_params = {}
 
@@ -444,7 +444,7 @@ class BootstrapPoliciesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_bootstrap_policy(self, bsp_name, bootstrap_policy, **kwargs):
+    def update_bootstrap_policy(self, id, bootstrap_policy, **kwargs):
         """
         Update Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Updates configuration settings for a Boostrap Policy. Making a request to this endpoint will update all fields for a Boostrap Policy. You should always pass all input values in the body of the request, because any value that is not provided will be updated to the default value. 
@@ -454,24 +454,24 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_bootstrap_policy(bsp_name, bootstrap_policy, callback=callback_function)
+        >>> thread = api.update_bootstrap_policy(id, bootstrap_policy, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of Boostrap Policy (required)
+        :param str id: Required. Id of Boostrap Policy to update (required)
         :param ApprendaSOCWebRestAPIResourcesBootstrapPolicy bootstrap_policy: Required. Bootstrap Policy to add to the collection. All fields should be passed in the request (required)
-        :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_bootstrap_policy_with_http_info(bsp_name, bootstrap_policy, **kwargs)
+            return self.update_bootstrap_policy_with_http_info(id, bootstrap_policy, **kwargs)
         else:
-            (data) = self.update_bootstrap_policy_with_http_info(bsp_name, bootstrap_policy, **kwargs)
+            (data) = self.update_bootstrap_policy_with_http_info(id, bootstrap_policy, **kwargs)
             return data
 
-    def update_bootstrap_policy_with_http_info(self, bsp_name, bootstrap_policy, **kwargs):
+    def update_bootstrap_policy_with_http_info(self, id, bootstrap_policy, **kwargs):
         """
         Update Bootstrap Policy
         **Requires Platform version 6.7.0 or later.**   Updates configuration settings for a Boostrap Policy. Making a request to this endpoint will update all fields for a Boostrap Policy. You should always pass all input values in the body of the request, because any value that is not provided will be updated to the default value. 
@@ -481,18 +481,18 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_bootstrap_policy_with_http_info(bsp_name, bootstrap_policy, callback=callback_function)
+        >>> thread = api.update_bootstrap_policy_with_http_info(id, bootstrap_policy, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Required. Name of Boostrap Policy (required)
+        :param str id: Required. Id of Boostrap Policy to update (required)
         :param ApprendaSOCWebRestAPIResourcesBootstrapPolicy bootstrap_policy: Required. Bootstrap Policy to add to the collection. All fields should be passed in the request (required)
-        :return: ApprendaSOCWebRestAPIResourcesBootstrapPolicy
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['bsp_name', 'bootstrap_policy']
+        all_params = ['id', 'bootstrap_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -507,9 +507,9 @@ class BootstrapPoliciesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'bsp_name' is set
-        if ('bsp_name' not in params) or (params['bsp_name'] is None):
-            raise ValueError("Missing the required parameter `bsp_name` when calling `update_bootstrap_policy`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_bootstrap_policy`")
         # verify the required parameter 'bootstrap_policy' is set
         if ('bootstrap_policy' not in params) or (params['bootstrap_policy'] is None):
             raise ValueError("Missing the required parameter `bootstrap_policy` when calling `update_bootstrap_policy`")
@@ -517,10 +517,10 @@ class BootstrapPoliciesApi(object):
 
         collection_formats = {}
 
-        resource_path = '/api/v1/bootstrappolicies/{bspName}'.replace('{format}', 'json')
+        resource_path = '/api/v1/bootstrappolicies/{id}'.replace('{format}', 'json')
         path_params = {}
-        if 'bsp_name' in params:
-            path_params['bspName'] = params['bsp_name']
+        if 'id' in params:
+            path_params['id'] = params['id']
 
         query_params = {}
 
@@ -546,7 +546,7 @@ class BootstrapPoliciesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ApprendaSOCWebRestAPIResourcesBootstrapPolicy',
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -554,7 +554,7 @@ class BootstrapPoliciesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def upload_bootstrap_archive_file(self, bsp_name, file, **kwargs):
+    def upload_bootstrap_archive_file(self, id, file, **kwargs):
         """
         Upload Bootstrap Policy archive
         **Requires Platform version 6.7.0 or later.**   Uploads an archive for a Bootstrap Policy. This will replace any archive already attached to the Bootstrap Policy.   Learn more about [Bootstrap Policy archive requirements](/current/bootstrap-policies). 
@@ -564,11 +564,11 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.upload_bootstrap_archive_file(bsp_name, file, callback=callback_function)
+        >>> thread = api.upload_bootstrap_archive_file(id, file, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Name of the Bootstrap Policy (required)
+        :param str id: Id of the Bootstrap Policy to update (required)
         :param file file: Archive for the Bootstrap Policy (required)
         :return: None
                  If the method is called asynchronously,
@@ -576,12 +576,12 @@ class BootstrapPoliciesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.upload_bootstrap_archive_file_with_http_info(bsp_name, file, **kwargs)
+            return self.upload_bootstrap_archive_file_with_http_info(id, file, **kwargs)
         else:
-            (data) = self.upload_bootstrap_archive_file_with_http_info(bsp_name, file, **kwargs)
+            (data) = self.upload_bootstrap_archive_file_with_http_info(id, file, **kwargs)
             return data
 
-    def upload_bootstrap_archive_file_with_http_info(self, bsp_name, file, **kwargs):
+    def upload_bootstrap_archive_file_with_http_info(self, id, file, **kwargs):
         """
         Upload Bootstrap Policy archive
         **Requires Platform version 6.7.0 or later.**   Uploads an archive for a Bootstrap Policy. This will replace any archive already attached to the Bootstrap Policy.   Learn more about [Bootstrap Policy archive requirements](/current/bootstrap-policies). 
@@ -591,18 +591,18 @@ class BootstrapPoliciesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.upload_bootstrap_archive_file_with_http_info(bsp_name, file, callback=callback_function)
+        >>> thread = api.upload_bootstrap_archive_file_with_http_info(id, file, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str bsp_name: Name of the Bootstrap Policy (required)
+        :param str id: Id of the Bootstrap Policy to update (required)
         :param file file: Archive for the Bootstrap Policy (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['bsp_name', 'file']
+        all_params = ['id', 'file']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -617,9 +617,9 @@ class BootstrapPoliciesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'bsp_name' is set
-        if ('bsp_name' not in params) or (params['bsp_name'] is None):
-            raise ValueError("Missing the required parameter `bsp_name` when calling `upload_bootstrap_archive_file`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `upload_bootstrap_archive_file`")
         # verify the required parameter 'file' is set
         if ('file' not in params) or (params['file'] is None):
             raise ValueError("Missing the required parameter `file` when calling `upload_bootstrap_archive_file`")
@@ -627,10 +627,10 @@ class BootstrapPoliciesApi(object):
 
         collection_formats = {}
 
-        resource_path = '/api/v1/bootstrappolicies/{bspName}/archive'.replace('{format}', 'json')
+        resource_path = '/api/v1/bootstrappolicies/{id}/archive'.replace('{format}', 'json')
         path_params = {}
-        if 'bsp_name' in params:
-            path_params['bspName'] = params['bsp_name']
+        if 'id' in params:
+            path_params['id'] = params['id']
 
         query_params = {}
 
