@@ -1,70 +1,78 @@
-"""Packaging settings."""
-
-
+# Always prefer setuptools over distutils
+from setuptools import setup, find_packages
+# To use a consistent encoding
 from codecs import open
-from os.path import abspath, dirname, join
-from subprocess import call
+from os import path
 
-from setuptools import Command, find_packages, setup
+here = path.abspath(path.dirname(__file__))
 
-from src.pyacp import __version__
-
-
-this_dir = abspath(dirname(__file__))
-with open(join(this_dir, 'README.rst'), encoding='utf-8') as file:
-    long_description = file.read()
-
-
-class RunTests(Command):
-    """Run all tests."""
-    description = 'run tests'
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        """Run all tests!"""
-        errno = call(['py.test', '--cov=pyacp', '--cov-report=term-missing'])
-        raise SystemExit(errno)
-
+# Get the long description from the README file
+with open(path.join(here, 'descr.rst'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
-    name = 'pyacp',
-    version = __version__,
-    description = 'Command Line Interface for the Apprenda Cloud Platform',
-    long_description = long_description,
-    url = 'https://github.com/apprenda/pyacp',
-    author = 'Erik Lustgarten',
-    author_email = '',
-    license = 'UNLICENSE',
-    classifiers = [
+    name='pyacp',
+
+    # Versions should comply with PEP440.  For a discussion on single-sourcing
+    # the version across setup.py and the project code, see
+    # https://packaging.python.org/en/latest/single_source_version.html
+    version='0.0.1',
+
+    description='Python Client Wrapper for Apprenda SOC API',
+    long_description=long_description,
+
+    # The project's main homepage.
+    url='https://github.com/apprenda/pyacp',
+
+    # Author details
+    author='Apprenda Inc.',
+    author_email='info@apprenda.com',
+
+    # Choose your license
+    license='Apache 2.0',
+
+    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        # How mature is this project? Common values are
+        #   3 - Alpha
+        #   4 - Beta
+        #   5 - Production/Stable
+        'Development Status :: 3 - Alpha',
+
+        # Indicate who your project is intended for
         'Intended Audience :: Developers',
-        'Topic :: Utilities',
-        'License :: Public Domain',
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
+        'Topic :: Software Development :: Build Tools',
+
+        # Pick your license as you wish (should match "license" above)
+        'License :: OSI Approved :: Apache 2.0',
+
+        # Specify the Python versions you support here. In particular, ensure
+        # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
-    keywords = 'cli',
-    packages = find_packages(exclude=['docs', 'tests*']),
-    install_requires = ['docopt'],
-    extras_require = {
-        'test': ['coverage', 'pytest', 'pytest-cov'],
-    },
-    entry_points = {
-        'console_scripts': [
-            'pyacp=pyacp.cli:main',
-        ],
-    },
-    cmdclass = {'test': RunTests},
+
+    # What does your project relate to?
+    keywords='apprenda api development',
+
+    # You can just specify the packages manually here if your project is
+    # simple. Or you can use find_packages().
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+
+    # TODO - make sure we continue to update which non-native libraries we need
+    install_requires=[],
+
+    # List additional groups of dependencies here (e.g. development
+    # dependencies). You can install these using the following syntax,
+    # for example:
+    # $ pip install -e .[dev,test]
+    # TODO - if we need any additional libraries for dev or test, include them here.
+    extras_require={
+        'dev': ['check-manifest'],
+        'test': ['coverage'],
+    }
 )
