@@ -39,6 +39,14 @@ class TestCustomPropertiesApi(unittest.TestCase):
         """
         pass
 
+    def test_api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get(self):
+        """
+        Test case for api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get
+
+        
+        """
+        pass
+
     def test_custom_properties_get_public(self):
         """
         Test case for custom_properties_get_public
@@ -63,11 +71,27 @@ class TestCustomPropertiesApi(unittest.TestCase):
         """
         pass
 
+    def test_retrieve_custom_properties_for_node(self):
+        """
+        Test case for retrieve_custom_properties_for_node
+
+        
+        """
+        pass
+
     def test_update_custom_property(self):
         """
         Test case for update_custom_property
 
         Update a Custom Property
+        """
+        pass
+
+    def test_update_custom_property_on_node(self):
+        """
+        Test case for update_custom_property_on_node
+
+        
         """
         pass
 

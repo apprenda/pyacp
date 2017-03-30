@@ -25,6 +25,11 @@ from .apprenda_soc_web_rest_api_resources_bootstrap_policy import ApprendaSOCWeb
 from .apprenda_utility_rest_api_common_resources_resource_base import ApprendaUtilityRestAPICommonResourcesResourceBase
 from .audit_record import AuditRecord
 from .cloud import Cloud
+from .cluster import Cluster
+from .cluster_report_card import ClusterReportCard
+from .cluster_report_card_group import ClusterReportCardGroup
+from .cluster_report_card_message import ClusterReportCardMessage
+from .cluster_report_card_section import ClusterReportCardSection
 from .component import Component
 from .custom_property import CustomProperty
 from .custom_property_applicability_option import CustomPropertyApplicabilityOption
@@ -33,6 +38,7 @@ from .custom_property_application_component_options import CustomPropertyApplica
 from .custom_property_application_options import CustomPropertyApplicationOptions
 from .custom_property_developer_options import CustomPropertyDeveloperOptions
 from .custom_property_update import CustomPropertyUpdate
+from .custom_property_value import CustomPropertyValue
 from .custom_property_value_options import CustomPropertyValueOptions
 from .deployment_policy import DeploymentPolicy
 from .encryption_request import EncryptionRequest
@@ -53,7 +59,9 @@ from .resource_allocation_report import ResourceAllocationReport
 from .unpaged_resource_base_add_on import UnpagedResourceBaseAddOn
 from .unpaged_resource_base_bootstrap_policy import UnpagedResourceBaseBootstrapPolicy
 from .unpaged_resource_base_cloud import UnpagedResourceBaseCloud
+from .unpaged_resource_base_cluster import UnpagedResourceBaseCluster
 from .unpaged_resource_base_component import UnpagedResourceBaseComponent
+from .unpaged_resource_base_custom_property_value import UnpagedResourceBaseCustomPropertyValue
 from .unpaged_resource_base_deployment_policy import UnpagedResourceBaseDeploymentPolicy
 from .unpaged_resource_base_platform_database import UnpagedResourceBasePlatformDatabase
 from .unpaged_resource_base_workload import UnpagedResourceBaseWorkload

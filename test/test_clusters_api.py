@@ -19,71 +19,63 @@ import unittest
 
 import pyacp
 from pyacp.rest import ApiException
-from pyacp.apis.nodes_api import NodesApi
+from pyacp.apis.clusters_api import ClustersApi
 
 
-class TestNodesApi(unittest.TestCase):
-    """ NodesApi unit test stubs """
+class TestClustersApi(unittest.TestCase):
+    """ ClustersApi unit test stubs """
 
     def setUp(self):
-        self.api = pyacp.apis.nodes_api.NodesApi()
+        self.api = pyacp.apis.clusters_api.ClustersApi()
 
     def tearDown(self):
         pass
 
-    def test_api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get(self):
+    def test_api_v1_clusters_get(self):
         """
-        Test case for api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get
+        Test case for api_v1_clusters_get
 
-        
-        """
-        pass
-
-    def test_get_all_nodes(self):
-        """
-        Test case for get_all_nodes
-
-        Get all nodes
+        Get all clusters
         """
         pass
 
-    def test_get_node_state(self):
+    def test_clusters_create(self):
         """
-        Test case for get_node_state
+        Test case for clusters_create
 
-        Get the state of a node
-        """
-        pass
-
-    def test_get_workloads_on_node(self):
-        """
-        Test case for get_workloads_on_node
-
-        Get all workloads on a node
+        Add new cluster
         """
         pass
 
-    def test_retrieve_custom_properties_for_node(self):
+    def test_clusters_delete_by_name(self):
         """
-        Test case for retrieve_custom_properties_for_node
+        Test case for clusters_delete_by_name
 
-        
-        """
-        pass
-
-    def test_set_node_state(self):
-        """
-        Test case for set_node_state
-
-        Update the state of a node
+        Remove cluster
         """
         pass
 
-    def test_update_custom_property_on_node(self):
+    def test_clusters_get_by_name(self):
         """
-        Test case for update_custom_property_on_node
+        Test case for clusters_get_by_name
 
-        
+        Get a cluster
+        """
+        pass
+
+    def test_clusters_update_by_name(self):
+        """
+        Test case for clusters_update_by_name
+
+        Update a cluster
+        """
+        pass
+
+    def test_clusters_validate(self):
+        """
+        Test case for clusters_validate
+
+        Validate a cluster
         """
         pass
 
