@@ -31,6 +31,14 @@ class TestNewIntegrationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get(self):
+        """
+        Test case for api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get
+
+        
+        """
+        pass
+
     def test_get_all_nodes(self):
         """
         Test case for get_all_nodes
@@ -44,6 +52,22 @@ class TestNewIntegrationApi(unittest.TestCase):
         Test case for get_node_state
 
         Get the state of a node
+        """
+        pass
+
+    def test_retrieve_custom_properties_for_node(self):
+        """
+        Test case for retrieve_custom_properties_for_node
+
+        
+        """
+        pass
+
+    def test_update_custom_property_on_node(self):
+        """
+        Test case for update_custom_property_on_node
+
+        
         """
         pass
 

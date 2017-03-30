@@ -143,6 +143,115 @@ class CustomPropertiesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get(self, node_name, role_name, custom_property_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get(node_name, role_name, custom_property_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :param str custom_property_name: (required)
+        :return: CustomPropertyValue
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get_with_http_info(node_name, role_name, custom_property_name, **kwargs)
+        else:
+            (data) = self.api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get_with_http_info(node_name, role_name, custom_property_name, **kwargs)
+            return data
+
+    def api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get_with_http_info(self, node_name, role_name, custom_property_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get_with_http_info(node_name, role_name, custom_property_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :param str custom_property_name: (required)
+        :return: CustomPropertyValue
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['node_name', 'role_name', 'custom_property_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'node_name' is set
+        if ('node_name' not in params) or (params['node_name'] is None):
+            raise ValueError("Missing the required parameter `node_name` when calling `api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get`")
+        # verify the required parameter 'role_name' is set
+        if ('role_name' not in params) or (params['role_name'] is None):
+            raise ValueError("Missing the required parameter `role_name` when calling `api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get`")
+        # verify the required parameter 'custom_property_name' is set
+        if ('custom_property_name' not in params) or (params['custom_property_name'] is None):
+            raise ValueError("Missing the required parameter `custom_property_name` when calling `api_v1_nodes_role_name_custompropertyvalues_custom_property_name_get`")
+
+
+        collection_formats = {}
+
+        resource_path = '/api/v1/nodes/{roleName}/custompropertyvalues/{customPropertyName}'.replace('{format}', 'json')
+        path_params = {}
+        if 'role_name' in params:
+            path_params['roleName'] = params['role_name']
+        if 'custom_property_name' in params:
+            path_params['customPropertyName'] = params['custom_property_name']
+
+        query_params = {}
+        if 'node_name' in params:
+            query_params['nodeName'] = params['node_name']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='CustomPropertyValue',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def custom_properties_get_public(self, **kwargs):
         """
         Get all Custom Properties
@@ -458,6 +567,108 @@ class CustomPropertiesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def retrieve_custom_properties_for_node(self, node_name, role_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.retrieve_custom_properties_for_node(node_name, role_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :return: UnpagedResourceBaseCustomPropertyValue
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.retrieve_custom_properties_for_node_with_http_info(node_name, role_name, **kwargs)
+        else:
+            (data) = self.retrieve_custom_properties_for_node_with_http_info(node_name, role_name, **kwargs)
+            return data
+
+    def retrieve_custom_properties_for_node_with_http_info(self, node_name, role_name, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.retrieve_custom_properties_for_node_with_http_info(node_name, role_name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :return: UnpagedResourceBaseCustomPropertyValue
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['node_name', 'role_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method retrieve_custom_properties_for_node" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'node_name' is set
+        if ('node_name' not in params) or (params['node_name'] is None):
+            raise ValueError("Missing the required parameter `node_name` when calling `retrieve_custom_properties_for_node`")
+        # verify the required parameter 'role_name' is set
+        if ('role_name' not in params) or (params['role_name'] is None):
+            raise ValueError("Missing the required parameter `role_name` when calling `retrieve_custom_properties_for_node`")
+
+
+        collection_formats = {}
+
+        resource_path = '/api/v1/nodes/{roleName}/custompropertyvalues'.replace('{format}', 'json')
+        path_params = {}
+        if 'role_name' in params:
+            path_params['roleName'] = params['role_name']
+
+        query_params = {}
+        if 'node_name' in params:
+            query_params['nodeName'] = params['node_name']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UnpagedResourceBaseCustomPropertyValue',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def update_custom_property(self, id, custom_property, **kwargs):
         """
         Update a Custom Property
@@ -554,6 +765,122 @@ class CustomPropertiesApi(object):
         header_params['Content-Type'] = self.api_client.\
             select_header_content_type(['application/json', 'text/json'])
 
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_custom_property_on_node(self, node_name, role_name, custom_property_name, custom_property_value, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_custom_property_on_node(node_name, role_name, custom_property_name, custom_property_value, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :param str custom_property_name: (required)
+        :param CustomPropertyValue custom_property_value: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_custom_property_on_node_with_http_info(node_name, role_name, custom_property_name, custom_property_value, **kwargs)
+        else:
+            (data) = self.update_custom_property_on_node_with_http_info(node_name, role_name, custom_property_name, custom_property_value, **kwargs)
+            return data
+
+    def update_custom_property_on_node_with_http_info(self, node_name, role_name, custom_property_name, custom_property_value, **kwargs):
+        """
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_custom_property_on_node_with_http_info(node_name, role_name, custom_property_name, custom_property_value, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str node_name: (required)
+        :param str role_name: (required)
+        :param str custom_property_name: (required)
+        :param CustomPropertyValue custom_property_value: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['node_name', 'role_name', 'custom_property_name', 'custom_property_value']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_custom_property_on_node" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'node_name' is set
+        if ('node_name' not in params) or (params['node_name'] is None):
+            raise ValueError("Missing the required parameter `node_name` when calling `update_custom_property_on_node`")
+        # verify the required parameter 'role_name' is set
+        if ('role_name' not in params) or (params['role_name'] is None):
+            raise ValueError("Missing the required parameter `role_name` when calling `update_custom_property_on_node`")
+        # verify the required parameter 'custom_property_name' is set
+        if ('custom_property_name' not in params) or (params['custom_property_name'] is None):
+            raise ValueError("Missing the required parameter `custom_property_name` when calling `update_custom_property_on_node`")
+        # verify the required parameter 'custom_property_value' is set
+        if ('custom_property_value' not in params) or (params['custom_property_value'] is None):
+            raise ValueError("Missing the required parameter `custom_property_value` when calling `update_custom_property_on_node`")
+
+
+        collection_formats = {}
+
+        resource_path = '/api/v1/nodes/{roleName}/custompropertyvalues/{customPropertyName}'.replace('{format}', 'json')
+        path_params = {}
+        if 'role_name' in params:
+            path_params['roleName'] = params['role_name']
+        if 'custom_property_name' in params:
+            path_params['customPropertyName'] = params['custom_property_name']
+
+        query_params = {}
+        if 'node_name' in params:
+            query_params['nodeName'] = params['node_name']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'custom_property_value' in params:
+            body_params = params['custom_property_value']
         # Authentication setting
         auth_settings = []
 

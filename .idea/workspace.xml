@@ -2,109 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3138d9ad-6342-4789-b64b-1d36af7a13c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pyacp.iml" afterPath="$PROJECT_DIR$/.idea/pyacp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/python-client-generated.zip" afterPath="$PROJECT_DIR$/pyacp/python-client-generated.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/__init__.py" afterPath="$PROJECT_DIR$/pyacp/apis/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/add_ons_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/add_ons_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/applications_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/applications_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/bootstrap_policies_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/bootstrap_policies_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/clouds_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/clouds_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/components_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/components_api.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/custom_properties_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/custom_properties_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/deployment_policies_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/deployment_policies_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/hosts_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/hosts_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/registry_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/registry_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/versions_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/versions_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/workloads_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/workloads_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/new_integration_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/new_integration_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/apis/nodes_api.py" afterPath="$PROJECT_DIR$/pyacp/apis/nodes_api.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/__init__.py" afterPath="$PROJECT_DIR$/pyacp/models/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/add_on.py" afterPath="$PROJECT_DIR$/pyacp/models/add_on.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/add_on_creation_request.py" afterPath="$PROJECT_DIR$/pyacp/models/add_on_creation_request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/application.py" afterPath="$PROJECT_DIR$/pyacp/models/application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_file_system_file_system_uri.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_file_system_file_system_uri.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_paged_resource_base_application.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_paged_resource_base_application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_paged_resource_base_version.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_paged_resource_base_version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_resource_base.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_rest_api_common_resources_resource_base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_soc_web_rest_api_resources_bootstrap_policy.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_soc_web_rest_api_resources_bootstrap_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/apprenda_utility_rest_api_common_resources_resource_base.py" afterPath="$PROJECT_DIR$/pyacp/models/apprenda_utility_rest_api_common_resources_resource_base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/cloud.py" afterPath="$PROJECT_DIR$/pyacp/models/cloud.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/component.py" afterPath="$PROJECT_DIR$/pyacp/models/component.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_applicability_option.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_applicability_option.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_applicability_option_collection.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_applicability_option_collection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_application_component_options.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_application_component_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_application_options.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_application_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_developer_options.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_developer_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_update.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_update.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/custom_property_value_options.py" afterPath="$PROJECT_DIR$/pyacp/models/custom_property_value_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/deployment_policy.py" afterPath="$PROJECT_DIR$/pyacp/models/deployment_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/inline_response_200.py" afterPath="$PROJECT_DIR$/pyacp/models/inline_response_200.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/inline_response_200_1.py" afterPath="$PROJECT_DIR$/pyacp/models/inline_response_200_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/inline_response_400.py" afterPath="$PROJECT_DIR$/pyacp/models/inline_response_400.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/node_state.py" afterPath="$PROJECT_DIR$/pyacp/models/node_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/paged_resource_base_custom_property.py" afterPath="$PROJECT_DIR$/pyacp/models/paged_resource_base_custom_property.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/paged_resource_base_registry_setting.py" afterPath="$PROJECT_DIR$/pyacp/models/paged_resource_base_registry_setting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/registry_setting.py" afterPath="$PROJECT_DIR$/pyacp/models/registry_setting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/resource_allocation_report.py" afterPath="$PROJECT_DIR$/pyacp/models/resource_allocation_report.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_add_on.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_add_on.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_bootstrap_policy.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_bootstrap_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_cloud.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_cloud.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_component.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_component.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_deployment_policy.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_deployment_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_workload.py" afterPath="$PROJECT_DIR$/pyacp/models/unpaged_resource_base_workload.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/version.py" afterPath="$PROJECT_DIR$/pyacp/models/version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/visibility_options.py" afterPath="$PROJECT_DIR$/pyacp/models/visibility_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/workload.py" afterPath="$PROJECT_DIR$/pyacp/models/workload.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyacp/models/workload_deployment_request.py" afterPath="$PROJECT_DIR$/pyacp/models/workload_deployment_request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_add_on.py" afterPath="$PROJECT_DIR$/test/test_add_on.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_add_on_creation_request.py" afterPath="$PROJECT_DIR$/test/test_add_on_creation_request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_add_ons_api.py" afterPath="$PROJECT_DIR$/test/test_add_ons_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_application.py" afterPath="$PROJECT_DIR$/test/test_application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_applications_api.py" afterPath="$PROJECT_DIR$/test/test_applications_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_file_system_file_system_uri.py" afterPath="$PROJECT_DIR$/test/test_apprenda_file_system_file_system_uri.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_application.py" afterPath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_version.py" afterPath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_resource_base.py" afterPath="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_resource_base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py" afterPath="$PROJECT_DIR$/test/test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_apprenda_utility_rest_api_common_resources_resource_base.py" afterPath="$PROJECT_DIR$/test/test_apprenda_utility_rest_api_common_resources_resource_base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_bootstrap_policies_api.py" afterPath="$PROJECT_DIR$/test/test_bootstrap_policies_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_cloud.py" afterPath="$PROJECT_DIR$/test/test_cloud.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_clouds_api.py" afterPath="$PROJECT_DIR$/test/test_clouds_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_component.py" afterPath="$PROJECT_DIR$/test/test_component.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_components_api.py" afterPath="$PROJECT_DIR$/test/test_components_api.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_properties_api.py" afterPath="$PROJECT_DIR$/test/test_custom_properties_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property.py" afterPath="$PROJECT_DIR$/test/test_custom_property.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_applicability_option.py" afterPath="$PROJECT_DIR$/test/test_custom_property_applicability_option.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_applicability_option_collection.py" afterPath="$PROJECT_DIR$/test/test_custom_property_applicability_option_collection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_application_component_options.py" afterPath="$PROJECT_DIR$/test/test_custom_property_application_component_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_application_options.py" afterPath="$PROJECT_DIR$/test/test_custom_property_application_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_developer_options.py" afterPath="$PROJECT_DIR$/test/test_custom_property_developer_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_update.py" afterPath="$PROJECT_DIR$/test/test_custom_property_update.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_custom_property_value_options.py" afterPath="$PROJECT_DIR$/test/test_custom_property_value_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_deployment_policies_api.py" afterPath="$PROJECT_DIR$/test/test_deployment_policies_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_deployment_policy.py" afterPath="$PROJECT_DIR$/test/test_deployment_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_hosts_api.py" afterPath="$PROJECT_DIR$/test/test_hosts_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_inline_response_200.py" afterPath="$PROJECT_DIR$/test/test_inline_response_200.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_inline_response_200_1.py" afterPath="$PROJECT_DIR$/test/test_inline_response_200_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_inline_response_400.py" afterPath="$PROJECT_DIR$/test/test_inline_response_400.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_node_state.py" afterPath="$PROJECT_DIR$/test/test_node_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_paged_resource_base_custom_property.py" afterPath="$PROJECT_DIR$/test/test_paged_resource_base_custom_property.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_paged_resource_base_registry_setting.py" afterPath="$PROJECT_DIR$/test/test_paged_resource_base_registry_setting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_registry_api.py" afterPath="$PROJECT_DIR$/test/test_registry_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_registry_setting.py" afterPath="$PROJECT_DIR$/test/test_registry_setting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_resource_allocation_report.py" afterPath="$PROJECT_DIR$/test/test_resource_allocation_report.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_add_on.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_add_on.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_bootstrap_policy.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_bootstrap_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_cloud.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_cloud.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_component.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_component.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_deployment_policy.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_deployment_policy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_unpaged_resource_base_workload.py" afterPath="$PROJECT_DIR$/test/test_unpaged_resource_base_workload.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_version.py" afterPath="$PROJECT_DIR$/test/test_version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_versions_api.py" afterPath="$PROJECT_DIR$/test/test_versions_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_visibility_options.py" afterPath="$PROJECT_DIR$/test/test_visibility_options.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_workload.py" afterPath="$PROJECT_DIR$/test/test_workload.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_workload_deployment_request.py" afterPath="$PROJECT_DIR$/test/test_workload_deployment_request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_workloads_api.py" afterPath="$PROJECT_DIR$/test/test_workloads_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_new_integration_api.py" afterPath="$PROJECT_DIR$/test/test_new_integration_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_nodes_api.py" afterPath="$PROJECT_DIR$/test/test_nodes_api.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,64 +26,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test_add_on.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_add_on.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-              <folding>
-                <element signature="e#1749#1787#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_add_ons_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_add_ons_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apprenda_file_system_file_system_uri.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyacp/models/apprenda_file_system_file_system_uri.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="encryption_request.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pyacp/models/encryption_request.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_add_on_creation_request.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_add_on_creation_request.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-              <folding>
-                <element signature="e#1749#1787#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="405">
               <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding>
                 <element signature="e#1749#1787#0" expanded="true" />
@@ -200,7 +53,7 @@
       <file leaf-file-name="test_apprenda_file_system_file_system_uri.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_apprenda_file_system_file_system_uri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="405">
               <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding>
                 <element signature="e#1749#1787#0" expanded="true" />
@@ -212,7 +65,7 @@
       <file leaf-file-name="test_apprenda_rest_api_common_resources_paged_resource_base_application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
+            <state relative-caret-position="405">
               <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding>
                 <element signature="e#1749#1787#0" expanded="true" />
@@ -224,8 +77,58 @@
       <file leaf-file-name="test_apprenda_rest_api_common_resources_paged_resource_base_version.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_version.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="405">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_apprenda_rest_api_common_resources_resource_base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_resource_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_apprenda_utility_rest_api_common_resources_resource_base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_apprenda_utility_rest_api_common_resources_resource_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_audit_record.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_audit_record.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_audit_records_api.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test_audit_records_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -237,14 +140,16 @@
     <findStrings>
       <find>from swagger_client</find>
       <find>swagger_client</find>
-      <find>swagger_client.</find>
       <find>import swagger_client</find>
+      <find>from swagger_client.</find>
+      <find>swagger_client.</find>
     </findStrings>
     <replaceStrings>
       <replace>from pyacp</replace>
       <replace>pyacp</replace>
-      <replace>pyacp.</replace>
       <replace>import pyacp</replace>
+      <replace>from pyacp.</replace>
+      <replace>pyacp.</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\code\Apprenda\pyacp</dir>
@@ -263,17 +168,22 @@
         <option value="$PROJECT_DIR$/pyacp/apis/add_ons_api.py" />
         <option value="$PROJECT_DIR$/test/test_add_on.py" />
         <option value="$PROJECT_DIR$/test/test_add_on_creation_request.py" />
+        <option value="$PROJECT_DIR$/test/test_add_ons_api.py" />
         <option value="$PROJECT_DIR$/test/test_application.py" />
         <option value="$PROJECT_DIR$/test/test_applications_api.py" />
         <option value="$PROJECT_DIR$/test/test_apprenda_file_system_file_system_uri.py" />
         <option value="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_application.py" />
         <option value="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_version.py" />
-        <option value="$PROJECT_DIR$/test/test_add_ons_api.py" />
+        <option value="$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_resource_base.py" />
+        <option value="$PROJECT_DIR$/test/test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py" />
+        <option value="$PROJECT_DIR$/test/test_apprenda_utility_rest_api_common_resources_resource_base.py" />
+        <option value="$PROJECT_DIR$/test/test_audit_record.py" />
+        <option value="$PROJECT_DIR$/test/test_audit_records_api.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-1928" />
     <option name="y" value="-593" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -351,24 +261,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pyacp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyacp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyacp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyacp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,12 +525,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_(2) - 2017.03.28 at 12h 53m 27s.xml">
-      <configuration name="Unittests in test (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_(3) - 2017.03.13 at 17h 59m 31s.xml">
-      <configuration name="Unittests in test (3)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_(3) - 2017.03.28 at 13h 04m 01s.xml">
       <configuration name="Unittests in test (3)" configurationId="tests" />
     </history-entry>
@@ -657,6 +543,12 @@
     <history-entry file="Unittests_in_test_(3) - 2017.03.28 at 15h 22m 14s.xml">
       <configuration name="Unittests in test (3)" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_(3) - 2017.03.30 at 13h 38m 30s.xml">
+      <configuration name="Unittests in test (3)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_(3) - 2017.03.30 at 13h 40m 07s.xml">
+      <configuration name="Unittests in test (3)" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_test_(4) - 2017.03.13 at 18h 01m 29s.xml">
       <configuration name="Unittests in test (4)" configurationId="tests" />
     </history-entry>
@@ -665,14 +557,13 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-593" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1928" y="-593" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.30260417" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.48958334" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.69739586" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.30520833" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.48333332" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.6947917" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -696,22 +587,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pyacp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_on.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1017,9 +892,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pyacp/models/apprenda_file_system_file_system_uri.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyacp/models/encryption_request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="e#1749#1775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_on.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
+        <state relative-caret-position="379">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#1749#1787#0" expanded="true" />
@@ -1029,7 +922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_on_creation_request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="405">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#1749#1787#0" expanded="true" />
@@ -1037,9 +930,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_add_ons_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="405">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#1749#1787#0" expanded="true" />
@@ -1059,7 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_apprenda_file_system_file_system_uri.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="405">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#1749#1787#0" expanded="true" />
@@ -1069,7 +970,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="405">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="e#1749#1787#0" expanded="true" />
@@ -1079,32 +980,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_paged_resource_base_version.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="405">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_add_ons_api.py">
+    <entry file="file://$PROJECT_DIR$/test/test_apprenda_rest_api_common_resources_resource_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyacp/models/apprenda_file_system_file_system_uri.py">
+    <entry file="file://$PROJECT_DIR$/test/test_apprenda_soc_web_rest_api_resources_bootstrap_policy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyacp/models/encryption_request.py">
+    <entry file="file://$PROJECT_DIR$/test/test_apprenda_utility_rest_api_common_resources_resource_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="405">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_audit_record.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_audit_records_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -6,6 +6,7 @@ from .applications_api import ApplicationsApi
 from .audit_records_api import AuditRecordsApi
 from .bootstrap_policies_api import BootstrapPoliciesApi
 from .clouds_api import CloudsApi
+from .clusters_api import ClustersApi
 from .components_api import ComponentsApi
 from .custom_properties_api import CustomPropertiesApi
 from .deployment_policies_api import DeploymentPoliciesApi
