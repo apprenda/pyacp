@@ -12,6 +12,9 @@ from pyacp import services
 class ApprendaOpsClient():
 
     internalClient = None
+
+    default_apps_pageSize = 2
+
     # Constructor for the client
     def __init__(self, host, username, password):
         self.internalClient = self.connect(self,host,username,password)
@@ -32,18 +35,23 @@ class ApprendaOpsClient():
             raise Exception('There was an issue connecting to the platform')
 
     def get_apps_start(self):
-        return self.get_apps_worker(None, 100)
+        return self.get_apps_worker(None, self.default_apps_pageSize)
 
     def get_apps_nextPage(self, url):
-        return self.get_apps_worker(url, 100)
+        return self.get_apps_worker(url, self.default_apps_pageSize)
 
     def get_apps_worker(self, url, pageSize):
         if url is None:
             kwargs = {'page_size': pageSize, 'page_number': 1}
         else:
-            page_string = url.split("page=")
-            parsed = int(page_string[-1])
-            kwargs = {'page_size' : pageSize, 'page_number': str(parsed + 1)}
+            page_string = url.split("pagenumber=")
+            split = page_string[-1]
+            ended = split.split("&")
+
+            pageString = ended[0]
+            page = int(pageString)
+
+            kwargs = {'page_size' : pageSize, 'page_number': str(page + 1)}
         api = ApplicationsApi(self.internalClient)
         return api.apps_search_new(**kwargs)
 
