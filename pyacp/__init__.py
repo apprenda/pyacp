@@ -70,5 +70,6 @@ from .models.version import Version
 from .models.visibility_options import VisibilityOptions
 from .models.workload import Workload
 from .models.workload_deployment_request import WorkloadDeploymentRequest
+from .apprenda_ops_client import ApprendaOpsClient
 
 configuration = Configuration()

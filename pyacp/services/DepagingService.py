@@ -4,6 +4,7 @@ class DepagingService(object):
         self.getNextPageFunction = getNextPageFunction
 
         self.currentPage = None
+
     def __next(self):
             return self.next()
 
@@ -15,7 +16,9 @@ class DepagingService(object):
             for item in self.currentPage.items:
                 yield item
 
-            if self.currentPage.next_page is not None:
-                self.currentPage = self.getNextPageFunction(self.currentPage.next_page)
+            if self.currentPage.next_page is not None \
+                    and self.currentPage.next_page.href is not None \
+                    and len(self.currentPage.next_page.href) > 0:
+                self.currentPage = self.getNextPageFunction(self.currentPage.next_page.href)
             else:
                 break

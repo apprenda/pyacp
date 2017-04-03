@@ -52,7 +52,7 @@ class TestDepagingService(unittest.TestCase):
         fakePaging = models.PagedResourceBaseRegistrySetting()
         fakePaging.items = range(page * 10, (page + 10) * 10)
         fakePaging.page_size = 10
-        fakePaging.next_page = "http://test.com/endpoint?pageSize=10&page=" + str((page + 1))
+        fakePaging.next_page = models.ApprendaRestAPICommonResourcesResourceBase("http://test.com/endpoint?pageSize=10&page=" + str((page + 1)))
         return fakePaging
 
 
