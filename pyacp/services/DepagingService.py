@@ -22,3 +22,14 @@ class DepagingService(object):
                 self.currentPage = self.getNextPageFunction(self.currentPage.next_page.href)
             else:
                 break
+
+    @staticmethod
+    def extractPageNumberFromUrl(url):
+        page_string = url.split("pagenumber=")
+        split = page_string[-1]
+        ended = split.split("&")
+
+        pageString = ended[0]
+        page = int(pageString)
+
+        return page

@@ -45,12 +45,7 @@ class ApprendaOpsClient():
         if url is None:
             kwargs = {'page_size': pageSize, 'page_number': 1}
         else:
-            page_string = url.split("pagenumber=")
-            split = page_string[-1]
-            ended = split.split("&")
-
-            pageString = ended[0]
-            page = int(pageString)
+            page = services.DepagingService.extractPageNumberFromUrl(url)
 
             kwargs = {'page_size' : pageSize, 'page_number': str(page + 1)}
         api = ApplicationsApi(self.internalClient)
