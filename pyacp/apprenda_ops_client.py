@@ -7,10 +7,15 @@ import pyacp.api_client
 from pyacp.apis.applications_api import ApplicationsApi
 from pyacp.apis.custom_properties_api import CustomPropertiesApi
 from pyacp.apis.hosts_api import HostsApi
+from pyacp import services
 
 class ApprendaOpsClient():
 
     internalClient = None
+
+    #how many applications to pull down per request
+    apps_page_size = 20
+
     # Constructor for the client
     def __init__(self, host, username, password):
         self.internalClient = self.connect(self,host,username,password)
@@ -30,11 +35,32 @@ class ApprendaOpsClient():
         else:
             raise Exception('There was an issue connecting to the platform')
 
+    def get_apps_start(self):
+        return self.get_apps_worker(None, self.apps_page_size)
+
+    def get_apps_nextPage(self, url):
+        return self.get_apps_worker(url, self.apps_page_size)
+
+    def get_apps_worker(self, url, pageSize):
+        if url is None:
+            kwargs = {'page_size': pageSize, 'page_number': 1}
+        else:
+            page_string = url.split("pagenumber=")
+            split = page_string[-1]
+            ended = split.split("&")
+
+            pageString = ended[0]
+            page = int(pageString)
+
+            kwargs = {'page_size' : pageSize, 'page_number': str(page + 1)}
+        api = ApplicationsApi(self.internalClient)
+        return api.apps_search_new(**kwargs)
+
     def getApplications(self, alias = None):
         api = ApplicationsApi(self.internalClient)
-        kwargs = {'page_size':1000}
         if(alias is None):
-            return api.apps_search_new(**kwargs).items
+            depage = services.DepagingService(self.get_apps_start, self.get_apps_nextPage)
+            return depage.next()
         else:
             response = api.api_v1_applications_app_alias_versions_get(alias).items
             if response.status_code == 404:
@@ -42,7 +68,9 @@ class ApprendaOpsClient():
             elif response.status_code == 400:
                 raise Exception('There was an error retrieving your application')
             else:
+
                 return response
+
 
     def getCustomProperties(self, name = None):
         kwargs = {'page_size': 1000}
