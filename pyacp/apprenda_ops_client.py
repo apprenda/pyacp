@@ -13,7 +13,8 @@ class ApprendaOpsClient():
 
     internalClient = None
 
-    default_apps_pageSize = 2
+    #how many applications to pull down per request
+    apps_page_size = 20
 
     # Constructor for the client
     def __init__(self, host, username, password):
@@ -35,10 +36,10 @@ class ApprendaOpsClient():
             raise Exception('There was an issue connecting to the platform')
 
     def get_apps_start(self):
-        return self.get_apps_worker(None, self.default_apps_pageSize)
+        return self.get_apps_worker(None, self.apps_page_size)
 
     def get_apps_nextPage(self, url):
-        return self.get_apps_worker(url, self.default_apps_pageSize)
+        return self.get_apps_worker(url, self.apps_page_size)
 
     def get_apps_worker(self, url, pageSize):
         if url is None:

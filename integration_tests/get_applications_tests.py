@@ -15,6 +15,7 @@ class test_get_applications(unittest.TestCase):
         settings = integrationtestsetttings.IntegrationTestSetttings()
 
         client = pyacp.ApprendaOpsClient(settings.baseurl, settings.adminEmail, settings.adminPassword)
+        client.apps_page_size = 2
 
         results = client.getApplications()
 
