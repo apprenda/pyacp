@@ -49,3 +49,18 @@ class TestGetApplications(unittest.TestCase):
 
         self.assertIsNotNone(res)
         self.assertEqual(app.name, res.name)
+
+    def testGetAppsByNameReturns404WhenNotFound(self):
+        settings = integrationtestsetttings.IntegrationTestSetttings()
+
+        client = pyacp.ApprendaOpsClient(settings.baseurl, settings.adminEmail, settings.adminPassword)
+
+        bad_alias = "notAThingHereISwear"
+
+        threw = False
+        try:
+            client.get_applications(bad_alias)
+        except pyacp.ApiException:
+            threw = True
+
+        self.assertTrue(threw)
