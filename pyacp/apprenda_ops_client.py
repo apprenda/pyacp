@@ -33,7 +33,7 @@ class ApprendaOpsClient:
             self.sessionToken = json.loads(response.content)['apprendaSessionToken']
             return pyacp.ApiClient(host + '/soc', "ApprendaSessionToken", self.sessionToken)
         elif response.status_code == 400:
-            raise ConnectionError(
+            raise IOError(
                 'The provided credentials are not valid. Please provide the correct username/password')
         else:
             raise Exception('There was an issue connecting to the platform')

@@ -43,7 +43,7 @@ class TestApplicationsApi(unittest.TestCase):
                                             '@ppr3nd@')
             response = self.client.get_applications('developer')
             print(response)
-        except ConnectionError as error:
+        except IOError as error:
             print(error)
         except Exception as ex:
             print(ex)
@@ -75,7 +75,7 @@ class TestApplicationsApi(unittest.TestCase):
                                             '@ppr3nd@')
             response = self.client.get_applications()
             print(response)
-        except ConnectionError as error:
+        except IOError as error:
             print(error)
         except Exception as ex:
             print(ex)
