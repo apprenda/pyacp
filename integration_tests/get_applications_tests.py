@@ -17,7 +17,7 @@ class TestGetApplications(unittest.TestCase):
         # set our page size low so we page
         client.apps_page_size = 2
 
-        results = client.getApplications()
+        results = client.get_applications()
 
         found_one = False
 

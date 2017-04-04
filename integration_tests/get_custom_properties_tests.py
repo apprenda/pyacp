@@ -18,7 +18,7 @@ class TestGetCustomProperties(unittest.TestCase):
         #set paging low so we test it
         client.custom_properties_page_size = 1
 
-        results = client.getCustomProperties()
+        results = client.get_custom_properties()
 
         self.assertIsNotNone(results)
 

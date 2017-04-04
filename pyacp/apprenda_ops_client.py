@@ -47,39 +47,42 @@ class ApprendaOpsClient():
     """
     Worker function to begin retrieving results in a paged format.  This creates a generator, that returns an iterator
     """
-    def get_paged_items_start(self, searchFunc, pageSize):
-        kwargs = {'page_size': pageSize, 'page_number': 1}
-        return searchFunc(**kwargs)
+    @staticmethod
+    def get_paged_items_start(search_function, page_size):
+        kwargs = {'page_size': page_size, 'page_number': 1}
+        return search_function(**kwargs)
 
     """
-    Worker function to continue retrieving results from a paged format.  Assumes the function takes page_size and page_number as params
+    Worker function to continue retrieving results from a paged format.  
+    Assumes the function takes page_size and page_number as params
     """
-    def get_paged_items_next(self, searchFunc, pageSize, url):
+    @staticmethod
+    def get_paged_items_next(search_function, page_size, url):
         page = services.DepagingService.extractPageNumberFromUrl(url)
 
-        kwargs = {'page_size': pageSize, 'page_number': str(page + 1)}
-        return searchFunc(**kwargs)
+        kwargs = {'page_size': page_size, 'page_number': str(page + 1)}
+        return search_function(**kwargs)
 
     """
     Worker function to get depaged results when the search function is used for both first and next
     """
-    def get_depager(self, searchFunc, pageSize):
-        startArg = [searchFunc, pageSize]
-        start = functools.partial(self.get_paged_items_start, *startArg)
+    def get_depager(self, search_function, page_size):
+        function_arguments = [search_function, page_size]
+        start_function = functools.partial(self.get_paged_items_start, *function_arguments)
 
-        next = functools.partial(self.get_paged_items_next, *startArg)
+        next_function = functools.partial(self.get_paged_items_next, *function_arguments)
 
-        return services.DepagingService(start, next)
+        return services.DepagingService(start_function, next_function)
 
     """
     Get all applications currently hosted by the platform, or just one by alias
     """
-    def getApplications(self, alias = None):
+    def get_applications(self, alias=None):
         api = ApplicationsApi(self.internalClient)
-        if(alias is None):
+        if alias is None:
             api = ApplicationsApi(self.internalClient)
-            depage = self.get_depager(api.apps_search_new, self.apps_page_size)
-            return depage.next()
+            depager = self.get_depager(api.apps_search_new, self.apps_page_size)
+            return depager.next()
         else:
             response = api.api_v1_applications_app_alias_versions_get(alias).items
             if response.status_code == 404:
@@ -89,12 +92,14 @@ class ApprendaOpsClient():
             else:
 
                 return response
-
-    def getCustomProperties(self, name = None):
+    """
+    Get all custom properties, or one by name
+    """
+    def get_custom_properties(self, name=None):
         api = CustomPropertiesApi(self.internalClient)
 
         depager = self.get_depager(api.custom_properties_get_public, self.custom_properties_page_size)
-        if(name is None):
+        if name is None:
             return depager.next()
         else:
             for property in depager.next():

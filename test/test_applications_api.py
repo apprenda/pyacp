@@ -41,7 +41,7 @@ class TestApplicationsApi(unittest.TestCase):
         try:
             self.client = ApprendaOpsClient('https://apps.se-sandbox.apprendalabs.com', 'elustgarten@apprenda.com',
                                             '@ppr3nd@')
-            response = self.client.getApplications('developer')
+            response = self.client.get_applications('developer')
             print(response)
         except ConnectionError as error:
             print(error)
@@ -73,7 +73,7 @@ class TestApplicationsApi(unittest.TestCase):
         try:
             self.client = ApprendaOpsClient('https://apps.se-sandbox.apprendalabs.com', 'elustgarten@apprenda.com',
                                             '@ppr3nd@')
-            response = self.client.getApplications()
+            response = self.client.get_applications()
             print(response)
         except ConnectionError as error:
             print(error)
