@@ -15,6 +15,7 @@ class ApprendaOpsClient():
 
     #how many applications to pull down per request
     apps_page_size = 20
+    custom_properties_page_size = 20
 
     # Constructor for the client
     def __init__(self, host, username, password):
@@ -60,19 +61,24 @@ class ApprendaOpsClient():
         return searchFunc(**kwargs)
 
     """
+    Worker function to get depaged results when the search function is used for both first and next
+    """
+    def get_depager(self, searchFunc, pageSize):
+        startArg = [searchFunc, pageSize]
+        start = functools.partial(self.get_paged_items_start, *startArg)
+
+        next = functools.partial(self.get_paged_items_next, *startArg)
+
+        return services.DepagingService(start, next)
+
+    """
     Get all applications currently hosted by the platform, or just one by alias
     """
     def getApplications(self, alias = None):
         api = ApplicationsApi(self.internalClient)
         if(alias is None):
             api = ApplicationsApi(self.internalClient)
-
-            startArg = [api.apps_search_new, self.apps_page_size]
-            start = functools.partial(self.get_paged_items_start, *startArg)
-
-            nextArgs = [api.apps_search_new, self.apps_page_size]
-            next= functools.partial(self.get_paged_items_next, *nextArgs)
-            depage = services.DepagingService(start, next)
+            depage = self.get_depager(api.apps_search_new, self.apps_page_size)
             return depage.next()
         else:
             response = api.api_v1_applications_app_alias_versions_get(alias).items
