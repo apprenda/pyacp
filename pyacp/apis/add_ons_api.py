@@ -230,7 +230,7 @@ class AddOnsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[UnpagedResourceBaseAddOn]',
+                                        response_type='UnpagedResourceBaseAddOn',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

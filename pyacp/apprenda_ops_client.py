@@ -7,6 +7,9 @@ from pyacp.apis.applications_api import ApplicationsApi
 from pyacp.apis.custom_properties_api import CustomPropertiesApi
 from pyacp.apis.hosts_api import HostsApi
 from pyacp.apis.nodes_api import NodesApi
+from pyacp.apis.add_ons_api import AddOnsApi
+from pyacp.apis.clouds_api import CloudsApi
+
 from pyacp import services
 
 class ApprendaOpsClient:
@@ -127,3 +130,33 @@ class ApprendaOpsClient:
                 return res
             except pyacp.ApiException:
                 raise KeyError('The node ' + name + 'was not found')
+
+    def get_add_ons(self, alias=None):
+        api = AddOnsApi(self.internalClient)
+
+        if alias is None:
+            container = api.add_on_get()
+            return container.items
+        else:
+            try:
+                res = api.add_on_get_by_name(alias)
+                if res is None:
+                    raise KeyError("AddOn " + alias + " was not found")
+                return res
+            except pyacp.ApiException:
+                raise KeyError('AddOn ' + alias + " was not found")
+
+    def get_public_clouds(self, id=None):
+        api = CloudsApi(self.internalClient)
+
+        if id is None:
+            container = api.clouds_get_public()
+            return container.items
+        else:
+            try:
+                res = api.clouds_get_by_id_p_ublic(id)
+                if res is None:
+                    raise KeyError("Cloud " + str(id) + " was not found")
+                return res
+            except pyacp.ApiException:
+                raise KeyError("Cloud " + str(id) + " was not found")
