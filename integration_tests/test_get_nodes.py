@@ -37,3 +37,16 @@ class TestGetNodes(unittest.TestCase):
             found_one = True
 
         self.assertTrue(found_one)
+
+    def test_get_node_by_name_throws_with_unfound_node(self):
+        settings = integrationtestsetttings.IntegrationTestSetttings()
+
+        client = pyacp.ApprendaOpsClient(settings.baseurl, settings.adminEmail, settings.adminPassword)
+
+        threw = False
+        try:
+            client.get_nodes("iamnotanodeimbadtestdata")
+        except pyacp.ApiException:
+            threw = True
+
+        self.assertTrue(threw)
