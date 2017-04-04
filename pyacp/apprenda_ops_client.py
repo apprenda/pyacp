@@ -78,14 +78,7 @@ class ApprendaOpsClient:
             depager = self.get_depager(api.apps_search_new, self.apps_page_size)
             return depager.next()
         else:
-            response = api.api_v1_applications_app_alias_versions_get(alias).items
-            if response.status_code == 404:
-                raise KeyError('The application does not exist')
-            elif response.status_code == 400:
-                raise Exception('There was an error retrieving your application')
-            else:
-
-                return response
+            return api.get_app_by_alias(alias)
 
     """
     Get all custom properties, or one by name

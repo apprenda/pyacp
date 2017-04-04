@@ -27,3 +27,25 @@ class TestGetApplications(unittest.TestCase):
             found_one = True
 
         self.assertTrue(found_one)
+
+    def testGetAppsByName(self):
+        settings = integrationtestsetttings.IntegrationTestSetttings()
+
+        client = pyacp.ApprendaOpsClient(settings.baseurl, settings.adminEmail, settings.adminPassword)
+        # set our page size low so we page
+        client.apps_page_size = 2
+
+        results = client.get_applications()
+
+        app = None
+        for a in results:
+            app = a
+            break
+
+        self.assertIsNotNone(app)
+        self.assertTrue(app.name)
+
+        res = client.get_applications(app.alias)
+
+        self.assertIsNotNone(res)
+        self.assertEqual(app.name, res.name)
