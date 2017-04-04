@@ -60,7 +60,7 @@ class TestGetApplications(unittest.TestCase):
         threw = False
         try:
             client.get_applications(bad_alias)
-        except pyacp.ApiException:
+        except KeyError:
             threw = True
 
         self.assertTrue(threw)

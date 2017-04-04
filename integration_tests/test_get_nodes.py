@@ -46,7 +46,7 @@ class TestGetNodes(unittest.TestCase):
         threw = False
         try:
             client.get_nodes("iamnotanodeimbadtestdata")
-        except pyacp.ApiException:
+        except KeyError:
             threw = True
 
         self.assertTrue(threw)

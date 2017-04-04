@@ -78,7 +78,10 @@ class ApprendaOpsClient:
             depager = self.get_depager(api.apps_search_new, self.apps_page_size)
             return depager.next()
         else:
-            return api.get_app_by_alias(alias)
+            try:
+                return api.get_app_by_alias(alias)
+            except pyacp.ApiException:
+                raise KeyError('The application ' + alias + " could not be found")
 
     """
     Get all custom properties, or one by name
@@ -117,7 +120,10 @@ class ApprendaOpsClient:
             return depager.next()
         else:
             # a little funky here - the nodes controller takes an optional name, but swagger can't figure that out alone
-            res = api.get_node_by_name(name)
-            if res is None:
-                raise KeyError("The node " + name + " was not found")
-            return res
+            try:
+                res = api.get_node_by_name(name)
+                if res is None:
+                    raise KeyError("The node " + name + " was not found")
+                return res
+            except pyacp.ApiException:
+                raise KeyError('The node ' + name + 'was not found')
