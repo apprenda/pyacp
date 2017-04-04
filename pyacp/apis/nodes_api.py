@@ -177,6 +177,7 @@ class NodesApi(object):
             (data) = self.get_all_nodes_with_http_info(**kwargs)
             return data
 
+
     def get_all_nodes_with_http_info(self, **kwargs):
         """
         Get all nodes
@@ -250,6 +251,117 @@ class NodesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='PagedResourceBaseNode',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_node_by_name(self, node_name, **kwargs):
+        """
+        Get all nodes
+        Returns all nodes in the Platform.   See more on [understanding your Platform nodes](/current/Managing-Apprenda-Infrastructure). 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_all_nodes(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int page_number: The page of results to return. Defaults to 1, the first page
+        :param int page_size: Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20
+        :param str node_name:
+        :return: PagedResourceBaseNode
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_node_by_name_with_http_info(node_name, **kwargs)
+        else:
+            (data) = self.get_node_by_name_with_http_info(node_name, **kwargs)
+            return data
+    """
+    Not pregenned - our swagger can't figure out optional node names on its own
+    """
+    def get_node_by_name_with_http_info(self, node_name, **kwargs):
+        """
+        Get all nodes
+        Returns all nodes in the Platform.   See more on [understanding your Platform nodes](/current/Managing-Apprenda-Infrastructure). 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_all_nodes_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int page_number: The page of results to return. Defaults to 1, the first page
+        :param int page_size: Number of results to return in a single request. All results will be grouped into pages of this size. Default: 20
+        :param str node_name:
+        :return: PagedResourceBaseNode
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['page_number', 'page_size', 'node_name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_all_nodes" % key
+                )
+            params[key] = val
+
+        params['node_name'] = node_name
+        del params['kwargs']
+
+        collection_formats = {}
+
+        resource_path = '/api/v1/nodes'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'page_number' in params:
+            query_params['pageNumber'] = params['page_number']
+        if 'page_size' in params:
+            query_params['pageSize'] = params['page_size']
+        if 'node_name' in params:
+            query_params['nodeName'] = params['node_name']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'text/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Node',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
