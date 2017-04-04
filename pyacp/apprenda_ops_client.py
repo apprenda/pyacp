@@ -90,22 +90,18 @@ class ApprendaOpsClient():
 
                 return response
 
-
     def getCustomProperties(self, name = None):
-        kwargs = {'page_size': 1000}
         api = CustomPropertiesApi(self.internalClient)
+
+        depager = self.get_depager(api.custom_properties_get_public, self.custom_properties_page_size)
         if(name is None):
-            return api.custom_properties_get_public(**kwargs).items
+            return depager.next()
         else:
-            response = api.custom_properties_get_public(**kwargs).items
-            id = None
-            for property in response:
+            for property in depager.next():
                 if property.name == name:
-                    id = property.id
-            if id is None:
-                raise KeyError('The custom property does not exist')
-            else:
-                return api.custom_properties_get_single_public(id)
+                    return property
+
+            raise KeyError('The custom property does not exist')
 
     def transitionNode(self, node, newstate):
         if(node is None or newstate is None):
