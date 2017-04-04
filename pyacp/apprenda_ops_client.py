@@ -1,7 +1,7 @@
 import requests
 import json
 
-import sys
+import functools
 
 import pyacp.api_client
 from pyacp.apis.applications_api import ApplicationsApi
@@ -36,25 +36,34 @@ class ApprendaOpsClient():
             raise Exception('There was an issue connecting to the platform')
 
     def get_apps_start(self):
-        return self.get_apps_worker(None, self.apps_page_size)
+        api = ApplicationsApi(self.internalClient)
+        return self.get_paged_items_start(api.apps_search_new, self.apps_page_size)
 
     def get_apps_nextPage(self, url):
-        return self.get_apps_worker(url, self.apps_page_size)
-
-    def get_apps_worker(self, url, pageSize):
-        if url is None:
-            kwargs = {'page_size': pageSize, 'page_number': 1}
-        else:
-            page = services.DepagingService.extractPageNumberFromUrl(url)
-
-            kwargs = {'page_size' : pageSize, 'page_number': str(page + 1)}
         api = ApplicationsApi(self.internalClient)
-        return api.apps_search_new(**kwargs)
+        return self.get_paged_items_next(url, api.apps_search_new, self.apps_page_size)
+
+    def get_paged_items_start(self, searchFunc, pageSize):
+        kwargs = {'page_size': pageSize, 'page_number': 1}
+        return searchFunc(**kwargs)
+
+    def get_paged_items_next(self, searchFunc, pageSize, url):
+        page = services.DepagingService.extractPageNumberFromUrl(url)
+
+        kwargs = {'page_size': pageSize, 'page_number': str(page + 1)}
+        return searchFunc(**kwargs)
 
     def getApplications(self, alias = None):
         api = ApplicationsApi(self.internalClient)
         if(alias is None):
-            depage = services.DepagingService(self.get_apps_start, self.get_apps_nextPage)
+            api = ApplicationsApi(self.internalClient)
+
+            startArg = [api.apps_search_new, self.apps_page_size]
+            start = functools.partial(self.get_paged_items_start, *startArg)
+
+            nextArgs = [api.apps_search_new, self.apps_page_size]
+            next= functools.partial(self.get_paged_items_next, *nextArgs)
+            depage = services.DepagingService(start, next)
             return depage.next()
         else:
             response = api.api_v1_applications_app_alias_versions_get(alias).items

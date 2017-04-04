@@ -15,12 +15,14 @@ class test_get_applications(unittest.TestCase):
         settings = integrationtestsetttings.IntegrationTestSetttings()
 
         client = pyacp.ApprendaOpsClient(settings.baseurl, settings.adminEmail, settings.adminPassword)
+        #set our page size low so we page
         client.apps_page_size = 2
 
         results = client.getApplications()
 
         foundOne = False
 
+        #enumerate the generator and we'll start firing
         for application in results:
             foundOne = True
 
