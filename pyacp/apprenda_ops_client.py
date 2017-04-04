@@ -43,16 +43,25 @@ class ApprendaOpsClient():
         api = ApplicationsApi(self.internalClient)
         return self.get_paged_items_next(url, api.apps_search_new, self.apps_page_size)
 
+    """
+    Worker function to begin retrieving results in a paged format.  This creates a generator, that returns an iterator
+    """
     def get_paged_items_start(self, searchFunc, pageSize):
         kwargs = {'page_size': pageSize, 'page_number': 1}
         return searchFunc(**kwargs)
 
+    """
+    Worker function to continue retrieving results from a paged format.  Assumes the function takes page_size and page_number as params
+    """
     def get_paged_items_next(self, searchFunc, pageSize, url):
         page = services.DepagingService.extractPageNumberFromUrl(url)
 
         kwargs = {'page_size': pageSize, 'page_number': str(page + 1)}
         return searchFunc(**kwargs)
 
+    """
+    Get all applications currently hosted by the platform, or just one by alias
+    """
     def getApplications(self, alias = None):
         api = ApplicationsApi(self.internalClient)
         if(alias is None):
