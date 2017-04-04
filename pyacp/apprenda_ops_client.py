@@ -9,7 +9,6 @@ from pyacp.apis.hosts_api import HostsApi
 from pyacp.apis.nodes_api import NodesApi
 from pyacp import services
 
-
 class ApprendaOpsClient:
     internalClient = None
 
@@ -39,18 +38,9 @@ class ApprendaOpsClient:
         else:
             raise Exception('There was an issue connecting to the platform')
 
-    def get_apps_start(self):
-        api = ApplicationsApi(self.internalClient)
-        return self.get_paged_items_start(api.apps_search_new, self.apps_page_size)
-
-    def get_apps_next_page(self, url):
-        api = ApplicationsApi(self.internalClient)
-        return self.get_paged_items_next(url, api.apps_search_new, self.apps_page_size)
-
     """
     Worker function to begin retrieving results in a paged format.  This creates a generator, that returns an iterator
     """
-
     @staticmethod
     def get_paged_items_start(search_function, page_size):
         kwargs = {'page_size': page_size, 'page_number': 1}
@@ -60,7 +50,6 @@ class ApprendaOpsClient:
     Worker function to continue retrieving results from a paged format.  
     Assumes the function takes page_size and page_number as params
     """
-
     @staticmethod
     def get_paged_items_next(search_function, page_size, url):
         page = services.DepagingService.extractPageNumberFromUrl(url)
@@ -71,7 +60,6 @@ class ApprendaOpsClient:
     """
     Worker function to get depaged results when the search function is used for both first and next
     """
-
     def get_depager(self, search_function, page_size):
         function_arguments = [search_function, page_size]
         start_function = functools.partial(self.get_paged_items_start, *function_arguments)
@@ -83,7 +71,6 @@ class ApprendaOpsClient:
     """
     Get all applications currently hosted by the platform, or just one by alias
     """
-
     def get_applications(self, alias=None):
         api = ApplicationsApi(self.internalClient)
         if alias is None:
@@ -103,7 +90,6 @@ class ApprendaOpsClient:
     """
     Get all custom properties, or one by name
     """
-
     def get_custom_properties(self, name=None):
         api = CustomPropertiesApi(self.internalClient)
 
