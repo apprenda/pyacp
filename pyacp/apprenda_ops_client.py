@@ -1,6 +1,5 @@
 import requests
 import json
-
 import functools
 
 import pyacp.api_client
@@ -11,7 +10,7 @@ from pyacp.apis.nodes_api import NodesApi
 from pyacp import services
 
 
-class ApprendaOpsClient():
+class ApprendaOpsClient:
     internalClient = None
 
     # how many applications to pull down per request
@@ -31,10 +30,10 @@ class ApprendaOpsClient():
         response = requests.post(host + '/authentication/api/v1/sessions/soc', data=payload, headers=headers,
                                  verify=False)
 
-        if (response.status_code == 201):
+        if response.status_code == 201:
             self.sessionToken = json.loads(response.content)['apprendaSessionToken']
             return pyacp.ApiClient(host + '/soc', "ApprendaSessionToken", self.sessionToken)
-        elif (response.status_code == 400):
+        elif response.status_code == 400:
             raise ConnectionError(
                 'The provided credentials are not valid. Please provide the correct username/password')
         else:
@@ -44,7 +43,7 @@ class ApprendaOpsClient():
         api = ApplicationsApi(self.internalClient)
         return self.get_paged_items_start(api.apps_search_new, self.apps_page_size)
 
-    def get_apps_nextPage(self, url):
+    def get_apps_next_page(self, url):
         api = ApplicationsApi(self.internalClient)
         return self.get_paged_items_next(url, api.apps_search_new, self.apps_page_size)
 
@@ -118,14 +117,14 @@ class ApprendaOpsClient():
 
             raise KeyError('The custom property does not exist')
 
-    def transitionNode(self, node, newstate):
-        if (node is None or newstate is None):
+    def transition_node(self, node, newstate):
+        if node is None or newstate is None:
             raise Exception('Please provide the name of the node to update and the new state')
         api = HostsApi(self.internalClient)
         response = api.api_v1_hosts_host_name_state_put(node, newstate)
-        if (response.status_code == 204):
+        if response.status_code == 204:
             return True
-        elif (response.status_code == 404):
+        elif response.status_code == 404:
             raise KeyError(
                 'The node provided was not found. Please ensure that the information passed is correct and try again.')
         else:
@@ -143,4 +142,3 @@ class ApprendaOpsClient():
             if res is None:
                 raise KeyError("The node " + name + " was not found")
             return res
-
